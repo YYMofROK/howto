@@ -9,24 +9,25 @@
 
 ## File System
 
->   - pwd
->   >현재 작업중인 디렉토리 경로 출력
->   >```
->   >   $ pwd
->   >```
+>  - pwd
+>  >현재 작업중인 디렉토리 경로 출력
+>  >```
+>  >   $ pwd
+>  >```
    
    
-- cd
-- ls
-- cp
-- mv
-- mkdir
-- rm
-- touch
-- cat
-- head
-- tail
+>  - cd
+>  - ls
+>  - cp
+>  - mv
+>  - mkdir
+>  - rm
+>  - touch
+>  - cat
+>  - head
+>  - tail
+>  - [Find - Search File](./search_file.md) 
 
-- [Find](./search_file.md) - Search File
+
 
 
