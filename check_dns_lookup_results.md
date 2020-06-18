@@ -1,8 +1,9 @@
 ## Check DNS lookup results
 ```
 
-$ yum install bind-utils
+$ yum install -y bind-utils
 
 $ nslookup naver.com
 
 ```
+![Alt text](/img/2.png)
