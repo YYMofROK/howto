@@ -6,6 +6,9 @@
 
 
 ## File
+
+### 
+[Search File](./how_to_checking_ip_address.md)  
 - Find files file names starting with "remi" in the '/root' directory
 
 - Find files that contains the string'test' in the'/root' directory
