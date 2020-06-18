@@ -4,6 +4,8 @@
 ## Network
 - [How to Checking ip address on Centos7](./how_to_checking_ip_address.md)  
 
+- [How to Checking ip address on Centos7](./how_to_checking_ip_address.md)  
+
 
 ## File
 
