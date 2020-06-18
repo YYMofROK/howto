@@ -7,8 +7,24 @@
 - [Check DNS lookup results](./check_dns_lookup_results.md)
 
 
-## File
+## File System
 
-- [Search File](./search_file.md)
+- pwd
+  - 현재 작업중인 디렉토리 경로 출력
+```
+$ pwd
+```
+- cd
+- ls
+- cp
+- mv
+- mkdir
+- rm
+- touch
+- cat
+- head
+- tail
+
+- [Find](./search_file.md) - Search File
 
 
