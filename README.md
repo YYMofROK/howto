@@ -9,7 +9,7 @@
 
 ## File
 
-- [Search File](./how_to_checking_ip_address.md)  
+- [Search File](./search_file.md)
 
 
 
