@@ -6,12 +6,9 @@
 
 >  - [Check DNS lookup results](./check_dns_lookup_results.md)
 
->  - traceroute
->  >네트워크 경로 추적
->  >```
->  >   $ yum install traceroute
->  >   $ cd /traceroute
->  >```
+>  - [How to Network Path Tracking](./how_to_network_path_tracking.md)
+
+
 
 ## File System
 
