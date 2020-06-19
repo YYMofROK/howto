@@ -2,10 +2,16 @@
 
 
 ## Network
-- [How to Checking ip address](./how_to_checking_ip_address.md)  
+>  - [How to Checking ip address](./how_to_checking_ip_address.md)  
 
-- [Check DNS lookup results](./check_dns_lookup_results.md)
+>  - [Check DNS lookup results](./check_dns_lookup_results.md)
 
+>  - traceroute
+>  >네트워크 경로 추적
+>  >```
+>  >   $ yum install traceroute
+>  >   $ cd /traceroute
+>  >```
 
 ## File System
 
