@@ -6,4 +6,4 @@ $ yum install -y traceroute
 $ traceroute naver.com
 
 ```
-![Alt text](/img/3.png)
+![Alt text](/img/3_1.png)
