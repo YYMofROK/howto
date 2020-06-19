@@ -12,13 +12,26 @@
 >  >  > 네트워크 경로 
 >
 
+## Schedule ( cron )
+>  - crontab -l
+>
+>  >  >현재 사용자의 crontab 설정 내용 확인
+>  >```
+>  >   $ crontab -l
+>
+>  >   00 * * * * /bin/rdate -s time.bora.net
+>
+>  >```
+>
+
+
 ## File System
 >  - [Find - Search File](./search_file.md) 
 >
 >  - pwd
 >  >  >현재 작업중인 디렉토리 경로 출력
 >  >```
->  >   [root@local-csdion home]# pwd
+>  >   $ pwd
 >  >   /home
 >
 >  >```
