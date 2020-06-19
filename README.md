@@ -19,7 +19,7 @@
 >  >```
 >  >   $ crontab -l
 >  >   00 * * * * /bin/rdate -s time.bora.net
->
+>  >
 >  >```
 >
 
