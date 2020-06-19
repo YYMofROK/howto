@@ -18,7 +18,6 @@
 >  >  >현재 사용자의 crontab 설정 내용 확인
 >  >```
 >  >   $ crontab -l
->
 >  >   00 * * * * /bin/rdate -s time.bora.net
 >
 >  >```
