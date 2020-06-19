@@ -12,7 +12,7 @@
 >  >  > 네트워크 경로 
 >
 
-## Schedule ( cron )
+## Scheduler ( cron )
 >  - crontab -l
 >
 >  >  >현재 사용자의 crontab 설정 내용 확인
