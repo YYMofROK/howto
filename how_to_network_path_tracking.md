@@ -1,9 +1,9 @@
 ## How to Network Path Tracking
 ```
 
-$ yum install -y bind-utils
+$ yum install -y traceroute
 
-$ nslookup naver.com
+$ traceroute naver.com
 
 ```
-![Alt text](/img/2.png)
+![Alt text](/img/3.png)
