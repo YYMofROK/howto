@@ -3,7 +3,7 @@
 
 ## Network
 >  - [How to Checking ip address](./how_to_checking_ip_address.md)  
->  > ip 주소 확인하기
+>  >  > ip 주소 확인하기
 >
 >  - [Check DNS lookup results](./check_dns_lookup_results.md)
 >  >  > 도메인 주소와 연결된 ip 주소 확인하기
