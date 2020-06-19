@@ -1,4 +1,4 @@
-## Check DNS lookup results
+## How to Network Path Tracking
 ```
 
 $ yum install -y bind-utils
