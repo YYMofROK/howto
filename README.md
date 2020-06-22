@@ -1,6 +1,13 @@
 # How To Centos Use
 
 
+
+## Laravel install
+>  - [How to Laravel_install](./centos7_laravel_install.md)
+>  >  > 라라벨 설치
+>
+
+
 ## Network
 >  - [How to Checking ip address](./how_to_checking_ip_address.md)  
 >  >  > ip 주소 확인하기
