@@ -53,7 +53,7 @@ $ composer create-project laravel/laravel [ PATH ]
     DocumentRoot /home/test/public_html/api/app/public
        <Directory "/home/test/public_html/api/app/public">
                Options Indexes FollowSymLinks
-               AllowOverride None
+               AllowOverride All
                Require all granted
        </Directory>
 </VirtualHost>
