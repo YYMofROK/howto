@@ -18,6 +18,10 @@ $ yum install -y composer
 # @ composer 명령어 사용을 위한 system PATH 경로 설정 및 설정 결과 확인
 $ PATH=$PATH:/root/.config/composer/vendor/bin
 $ echo $PATH
+
+# @ /root-사용자로-Composer-사용시-Do-not-run-Composer-as-rootsuper-user-에러가-발생할때-강제로-사용하는-방법
+$ export COMPOSER_ALLOW_SUPERUSER=1
+
 $ composer global about
 
 # @ 이 명령어로 global config에 repos.packagist 를 추가한다.
