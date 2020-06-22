@@ -1,13 +1,13 @@
-### Laravel Framework 7.16.1 - 2020.06.22
+## Laravel Framework 7.16.1 - 2020.06.22
 
-### install Process
+## install Process
 ```
   설치환경
   Centos 7.x
   Apache 2.4.x
   PHP 7.2.x
 ```
-#### step1 - composer setting
+### step1 - composer setting
 ```
 # @ root 권한 취득
 $ su root
@@ -42,7 +42,7 @@ $ composer global require hirak/prestissimo
 # @ 패키지 설치
 $ composer create-project laravel/laravel [ PATH ]
 ```
-#### step2 - Apache Vertual host 설정
+### step2 - Apache Vertual host 설정
 ```
 <VirtualHost *:80>
     ServerName   test.test.test
@@ -54,7 +54,7 @@ $ composer create-project laravel/laravel [ PATH ]
        </Directory>
 </VirtualHost>
 ```
-#### step4 - 참고
+### step4 - 참고
 ```
 
 https://laravel.kr/docs/7.x/installation
