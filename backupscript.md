@@ -1,7 +1,7 @@
 
-## backupScript.sh
+### backupScript.sh
 
-'''
+```
 #!/bin/bash
 
 # /home 디렉토리 하위의 디렉토리들을 tar.gz 형태로 압축하여 /home/backup 디렉토리에 저장한다.
@@ -18,4 +18,4 @@ if [ ${HomeDirPath}"/$LINE" != ${BackDirPath} ]; then
 fi
 done
 
-'''
+```
