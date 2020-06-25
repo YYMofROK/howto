@@ -2,8 +2,8 @@
 
 
 ## Shell Script
->  - [How to_batch backup](./backupscript.md)
->  >  > 일괄백업 
+>  - [How to batch backup](./backupscript.md)
+>  >  > 일괄백업 - 스케줄러( cron ) 연동할 경우 일괄 자동 백업 가능
 >
 
 
