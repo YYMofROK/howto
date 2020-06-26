@@ -38,6 +38,7 @@
 
 ## File System
 >  - [Find - Search File](./search_file.md) 
+>  >  >파일 또는 디렉토리 찾기
 >
 >  - pwd
 >  >  >현재 작업중인 디렉토리 경로 출력
