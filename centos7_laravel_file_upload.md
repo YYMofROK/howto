@@ -3,6 +3,7 @@
 
 ### step1 - disk config
 ```
+# /app/config/filesystem.php
 return [
 
     /*
@@ -122,8 +123,9 @@ return [
 ```
 ### step2 - Storage 모듈에 대한 사용선언
 ```
-# Storage 모듈에 대한 사용선언
-use Illuminate\Support\Facades\Storage;
+
+    # Storage 모듈에 대한 사용선언
+    use Illuminate\Support\Facades\Storage;
 
 ```
 ### step3 - 파일 생성 
