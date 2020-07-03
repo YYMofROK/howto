@@ -130,11 +130,11 @@ return [
 ```
 ### step3 - 파일 생성 
 ```
-  # custom_01 디스크에
-  # 저장할 파일명 : test.png
-  # 업로드된 파일데이타 : $httpRrequest->file('upload_files')
-  
-  Storage::disk('custom_01')->put('test.png' , $httpRrequest->file('upload_files') ) ;
+    # custom_01 디스크에
+    # 저장할 파일명 : test.png
+    # 업로드된 파일데이타 : $httpRrequest->file('upload_files')
+    
+    Storage::disk('custom_01')->put('test.png' , $httpRrequest->file('upload_files') ) ;
 
 ```
 
