@@ -11,6 +11,9 @@
 >  - [How to Laravel install](./centos7_laravel_install.md)
 >  >  > 라라벨 설치
 >
+>  - [How to Laravel UploadedFile](./centos7_laravel_file_upload.md)
+>  >  > 라라벨 
+>
 
 
 ## Network
