@@ -134,7 +134,29 @@ return [
     # 저장할 파일명 : test.png
     # 업로드된 파일데이타 : $httpRrequest->file('upload_files')
     
-    Storage::disk('custom_01')->put('test.png' , $httpRrequest->file('upload_files') ) ;
+//             echo "\n\n";
+//             var_dump(  public_path() );
+//             echo "\n\n";
+//             var_dump(  app_path() );
+//             echo "\n\n";
+//             var_dump(  base_path() );
+//             echo "\n\n";
+//             var_dump(  storage_path() );
+//             echo "\n\n";
+//             var_dump( $httpRrequest->file('upload_file')->getFileInfo() );
+//             echo "\n\n";
+//             var_dump( $httpRrequest->file('upload_file')->getFilename() );
+//             echo "\n\n";
+//             var_dump( $httpRrequest->file('upload_file')->getPathname() );
+//             echo "\n\n";
+//             var_dump( $httpRrequest->file('upload_file')->extension() );
+//             echo "\n\n";
+//             var_dump( $httpRrequest->file('upload_file')->getBasename() );
+//             echo "\n\n";
+//             var_dump( $httpRrequest->file('upload_file')->getClientOriginalName() );
+//             echo "\n\n";
+//             Storage::disk('custom_01')->put('test.png' , $httpRrequest->file('upload_files') ) ;
+//             $httpRrequest->file('upload_file')->store($SaveFilePath, 'custom_01');
 
 ```
 
