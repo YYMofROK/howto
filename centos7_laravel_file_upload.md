@@ -155,7 +155,9 @@ return [
 //             echo "\n\n";
 //             var_dump( $httpRrequest->file('upload_file')->getClientOriginalName() );
 //             echo "\n\n";
+//
 //             Storage::disk('custom_01')->put('test.png' , $httpRrequest->file('upload_files') ) ;
+//             Storage::disk($diskName)->putFile($SaveFilePath, $httpRrequest->file('upload_file'));
 //             $httpRrequest->file('upload_file')->store($SaveFilePath, 'custom_01');
 
 ```
