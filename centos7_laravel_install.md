@@ -44,14 +44,14 @@ $ composer clear-cache
 $ composer global require hirak/prestissimo
 
 # @ 패키지 설치
-$ composer create-project laravel/laravel [ PATH ]
+$ composer create-project laravel/laravel /home/test/public_html/app/
 ```
 ### step2 - Apache Vertual host 설정
 ```
 <VirtualHost *:80>
     ServerName   test.test.test
-    DocumentRoot /home/test/public_html/api/app/public
-       <Directory "/home/test/public_html/api/app/public">
+    DocumentRoot /home/test/public_html/app/public
+       <Directory "/home/test/public_html/app/public">
                Options Indexes FollowSymLinks
                AllowOverride All
                Require all granted
