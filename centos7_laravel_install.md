@@ -2,10 +2,13 @@
 
 ## install Process
 ```
-  설치환경
-  Centos 7.x
-  Apache 2.4.x
-  PHP 7.2.x
+  * 서버환경 : 최소 2GB 이상의 메모리가 필요함.
+  * 설치환경
+    Centos 7.x
+    Apache 2.4.x
+    PHP 7.2.x
+  
+  
 ```
 ### step1 - composer setting
 ```
