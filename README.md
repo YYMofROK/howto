@@ -7,7 +7,7 @@
 >
 
 
-## Laravel install
+## Laravel
 >  - [How to Laravel install](./centos7_laravel_install.md)
 >  >  > 라라벨 설치
 >
