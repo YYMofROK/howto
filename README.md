@@ -10,6 +10,9 @@
 >  - [How to nodejs install_use_nvm](./centos7_nodejs_install_use_nvm.md)
 >  >  > nvm 을 이용한 nodejs 설치 
 >
+>  - [How to Setting crawling environment](./centos7_nodejs_setting_crawling_environment.md)
+>  >  >  install chromium / puppeteer / cheerio / korean font
+>
 
 
 
