@@ -6,6 +6,12 @@
 >  >  > 일괄백업 - 스케줄러( cron ) 연동할 경우 일괄 자동 백업 가능
 >
 
+## nodejs
+>  - [How to nodejs install_use_nvm](./centos7_nodejs_install_use_nvm.md)
+>  >  > nvm 을 이용한 nodejs 설치 
+>
+
+
 
 ## Laravel
 >  - [How to Laravel install](./centos7_laravel_install.md)
