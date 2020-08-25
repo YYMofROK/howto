@@ -1,4 +1,4 @@
-## nvm 을 이용한 nodejs 설치 - 2020.08.25
+## nodejs, puppeteer, chromium, cheerio , crawling 환경 설정  - 2020.08.25
 
 ## Installation environment 
 ```  
@@ -11,8 +11,25 @@
 # root 권한 취득
 $ sudo su
 
-# 패키지 업데이트
-$ yum -y update
+# 크로미움 설치를 위한 저장소 추가
+$ yum install -y epel-release
+
+# 크로미움 설치
+$ yum install -y chromium
+
+# wget 설치
+$ yum install -y wget
+
+# unzip 설치
+$ yum install -y unzip
+
+
+# 폰트 다운로드 및 설치
+$ cd /usr/share/fonts/
+$ wget http://cdn.naver.com/naver/NanumFont/fontfiles/NanumFont_TTF_ALL.zip
+$ unzip ./NanumFont_TTF_ALL.zip
+$ rm NanumFont_TTF_ALL.zip
+$ fc-cache -r
 
 # node 구동 유저 추가
 $ useradd nodeuser
@@ -23,11 +40,12 @@ $ su nodeuser
 # node 구동 유저의 홈 디렉토리 이동
 $ cd ~
 
-# node 환경 설정( NVM 사용 ) 및 실행
-$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-$ source .bash_profile
-$ nvm ls-remote
-$ nvm install v14.8.0
+# puppeteer 설치
+$ npm install puppeteer
+
+# cheerio 설치
+$ npm install -y cheerio
+
 ```
 
 
