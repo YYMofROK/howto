@@ -45,7 +45,12 @@
 >  >   00 * * * * /bin/rdate -s time.bora.net
 >  >
 >  >```
->  >  > cron 설정 파일 위치 /var/spool/cron
+>  >  >cron 설정 파일 위치
+>  >```
+>  >   $ ls -al /var/spool/cron
+>  >
+>  >```
+>  >
 >
 
 
