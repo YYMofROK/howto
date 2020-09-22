@@ -161,5 +161,5 @@ return [
 //             $httpRrequest->file('upload_file')->store($SaveFilePath, 'custom_01');
 
 ```
-
+### step4 - 업로드 처리한 파일을 public 디렉토리에서 접근하기 위하여 심볼릭 링크를 생성해 주어야 한다.
 
