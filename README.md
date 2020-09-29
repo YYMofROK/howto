@@ -15,7 +15,6 @@
 >
 
 
-
 ## Laravel
 >  - [How to Laravel install](./centos7_laravel_install.md)
 >  >  > 라라벨 설치
@@ -23,6 +22,39 @@
 >  - [How to Laravel UploadedFile](./centos7_laravel_file_upload.md)
 >  >  > 라라벨 
 >
+
+## PHP
+>  - [PHP 메모리 부족] Fatal error: Allowed memory size of 134217728 bytes
+>
+>  >  >설정값 확인
+>  >```
+>  >   $ cat /etc/php.ini | grep memory_limit
+>  >   cat /etc/php.ini | grep memory_limit
+>  >
+>  >```
+>  >  >해결방법 1. /etc/php.ini 설정파일 내부 메모리 제한 확장 변경
+>  >```
+>  >   $ vi /etc/php.ini
+>  >
+>  >   ;memory_limit = 128M
+>  >   memory_limit = 512M
+>  >   
+>  >   $ systemctl restart httpd
+>  >   
+>  >```
+>  >  >해결방법 2. 메모리 부족이 발생하는 실행파일 안에서 메모리 제한 확장
+>  >```
+>  >   <?php
+>  >   ini_set('memory_limit','512M');
+>  >   
+>  >   ini_set('memory_limit','-1');  // 메모리 제한 무제한으로 설정
+>  >
+>  >   ?>
+>  >   
+>  >```
+>  >
+>
+
 
 
 ## Network
