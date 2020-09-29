@@ -1,4 +1,4 @@
-# How To Centos Use
+# How To
 
 
 ## Shell Script
