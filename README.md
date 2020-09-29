@@ -29,7 +29,7 @@
 >  >  >설정값 확인
 >  >```
 >  >   $ cat /etc/php.ini | grep memory_limit
->  >   cat /etc/php.ini | grep memory_limit
+>  >   memory_limit = 128M
 >  >
 >  >```
 >  >  >해결방법 1. /etc/php.ini 설정파일 내부 메모리 제한 확장 변경
@@ -52,7 +52,6 @@
 >  >   ?>
 >  >   
 >  >```
->  >
 >
 
 
