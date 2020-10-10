@@ -1,4 +1,4 @@
-## Laravel Uploaded File Process ( 라라벨 파일 업로드 처리 )
+## Laravel Uploaded File Process ( 라라벨 파일 업로드 )
 
 
 ### step1 - disk config
