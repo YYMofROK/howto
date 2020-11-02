@@ -5,6 +5,15 @@
 >  - [How to batch backup](./backupscript.md)
 >  >  > 일괄백업 - 스케줄러( cron ) 연동할 경우 일괄 자동 백업 가능
 >
+>  - [How to connect ssh]
+>  >```
+>  >   shell> yum install sshpass
+>  >
+>  >   shell> sshpass -p'[password]' ssh [user]@[ip address] -p[port] -oStrictHostKeyChecking=yes
+>  >
+>  >```
+>
+
 
 ## nodejs
 >  - [How to nodejs install_use_nvm](./centos7_nodejs_install_use_nvm.md)
