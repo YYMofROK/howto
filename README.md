@@ -6,6 +6,7 @@
 >  >  > 일괄백업 - 스케줄러( cron ) 연동할 경우 일괄 자동 백업 가능
 >
 >  - [How to connect ssh]
+>  >  > shell 에서 ssh 원격 접속 샘플 - 조금응용하면 스크립트화 
 >  >```
 >  >   shell> yum install sshpass
 >  >
