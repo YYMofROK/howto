@@ -67,7 +67,7 @@
 
 
 ## Network
->  - [How to Checking ip address](./how_to_checking_ip_address.md)  
+>  - [How to Checking ip address on Centos7](./how_to_checking_ip_address.md)  
 >  >  > ip 주소 확인하기
 >
 >  - [Check DNS lookup results](./check_dns_lookup_results.md)
