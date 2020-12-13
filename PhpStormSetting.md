@@ -4,18 +4,14 @@
 ## FTP/SFTP - RemoteWork Setting short cut example
 
 ### Menu Location 
-> File => Settings => Keymap
+> File => Settings => Keymap => plugins
 
+#### FTP/SFTP Connectivity (ex. Remote Hosts Access)
 
+> Plugins | FTP/SFTP Connectivity (ex. Remote Hosts Access) | Compare Local File with Deployed Version
 
-> > > plugins
+> > My shortcut setting is 'Ctrl+Alt+Shift+P'
 
-> > > FTP/SFTP Connectivity (ex. Remote Hosts Access)
+> Plugins | FTP/SFTP Connectivity (ex. Remote Hosts Access) | Upload to...
 
-> > > > Plugins | FTP/SFTP Connectivity (ex. Remote Hosts Access) | Compare Local File with Deployed Version
-
-> > > > > My shortcut setting is 'Ctrl+Alt+Shift+P'
-
-> > > > Plugins | FTP/SFTP Connectivity (ex. Remote Hosts Access) | Upload to...
-
-> > > > > My shortcut setting is 'Ctrl+Alt+Shift+S'
+> > My shortcut setting is 'Ctrl+Alt+Shift+S'
