@@ -3,11 +3,10 @@
 
 ## FTP/SFTP - RemoteWork Setting short cut example
 
-> File
+### Menu Location 
+> File => Settings => Keymap
 
-> > Settings
 
-> > > Keymap
 
 > > > plugins
 
