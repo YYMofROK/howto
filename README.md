@@ -1,7 +1,29 @@
 # How To
 
+## git 
+>  - [How to 브랜치 삭제]
+>  >  > error: Cannot delete branch 'dev' checked out at [ C:/~ ]
+>  >```
+>  >   # 현재 작업중인 브랜치를 삭제하고자 하여 발생한 오류 다른 브랜치로 전환후 삭제 실행
+>  >   
+>  >   shell> git checkout master
+>  >
+>  >   shell> dit branch -d dev
+>  >
+>  >```
+>
+
 
 ## Shell Script
+>  - [How to connect ssh]
+>  >  > shell 에서 ssh 원격 접속 샘플 - 조금응용하면 스크립트화 가능
+>  >```
+>  >   shell> yum install sshpass
+>  >
+>  >   shell> sshpass -p'[password]' ssh [user]@[ip address] -p[port] -oStrictHostKeyChecking=yes
+>  >
+>  >```
+>
 >  - [How to batch backup](./backupscript.md)
 >  >  > 일괄백업 - 스케줄러( cron ) 연동할 경우 일괄 자동 백업 가능
 >
