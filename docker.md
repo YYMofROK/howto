@@ -1,3 +1,13 @@
+
+yum install openssh-server openssh-client openssh-askpass
+vi /etc/ssh/sshd_config
+vi /etc/selinux/config
+
+iptables -L
+vi /etc/rc.d/rc.local
+chmod 701 /etc/rc.d/rc.local
+reboot
+
 yum update -y
 yum group install -y "Development Tools"
 yum install -y net-tools
