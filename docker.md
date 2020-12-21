@@ -1,5 +1,25 @@
+# docker
 
-yum install openssh-server openssh-client openssh-askpass
+## install sshd
+>  - [How to docker install ]
+>  >
+>  >```
+>  >   # 현재 작업중인 브랜치를 삭제하고자 하여 발생한 오류 다른 브랜치로 전환후 삭제 실행
+>  >   
+>  >   shell> yum install -y openssh-server
+>  >
+>  >   shell> yum install -y openssh-client
+>  >
+>  >   shell> yum install -y openssh-askpass
+>  >   
+>  >   vi /etc/ssh/sshd_config
+>  >```
+> ---------------------------------------------------------------------------------------------
+
+
+
+
+
 vi /etc/ssh/sshd_config
 vi /etc/selinux/config
 
