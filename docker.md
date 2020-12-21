@@ -1,7 +1,7 @@
-# docker
+# How to docker install
 
 ## install sshd
->  - [How to docker install ]
+> ---------------------------------------------------------------------------------------------
 >  >
 >  >```
 >  >   # 현재 작업중인 브랜치를 삭제하고자 하여 발생한 오류 다른 브랜치로 전환후 삭제 실행
@@ -12,7 +12,20 @@
 >  >
 >  >   shell> yum install -y openssh-askpass
 >  >   
->  >   vi /etc/ssh/sshd_config
+>  >   shell> vi /etc/ssh/sshd_config
+>  >   
+>  >   .
+>  >   .
+>  > # If you want to change the port on a SELinux system, you have to tell
+>  > # SELinux about this change.
+>  > # semanage port -a -t ssh_port_t -p tcp #PORTNUMBER
+>  > #Port 22 # <- 주석을 해제 한다.
+>  > #AddressFamily any
+>  > #ListenAddress 0.0.0.0
+>  > #ListenAddress ::
+>  >   .
+>  >   .
+>  >   
 >  >```
 > ---------------------------------------------------------------------------------------------
 
