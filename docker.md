@@ -13,7 +13,6 @@
 >  >   shell> yum install -y openssh-askpass
 >  >   
 >  >   shell> vi /etc/ssh/sshd_config
->  >   
 >  >   .
 >  >   .
 >  > # If you want to change the port on a SELinux system, you have to tell
@@ -25,16 +24,36 @@
 >  > #ListenAddress ::
 >  >   .
 >  >   .
+>  >```
+> ---------------------------------------------------------------------------------------------
+
+## selinux 해제
+> ---------------------------------------------------------------------------------------------
+>  >view 
+>  >```
+>  >   # 개발 및 테스트 목적으로 해제한 상태로 사용
 >  >   
+>  >   shell> vi /etc/selinux/config
+>  >   
+>  > # This file controls the state of SELinux on the system.
+>  > # SELINUX= can take one of these three values:
+>  > #     enforcing - SELinux security policy is enforced.
+>  > #     permissive - SELinux prints warnings instead of enforcing.
+>  > #     disabled - No SELinux policy is loaded.
+>  > #SELINUX=enforcing
+>  > SELINUM=disabled
+>  > # SELINUXTYPE= can take one of three values:
+>  > #     targeted - Targeted processes are protected,
+>  > #     minimum - Modification of targeted policy. Only selected processes are protected.
+>  > #     mls - Multi Level Security protection.
+>  > SELINUXTYPE=targeted
+>  >   .
+>  > 
 >  >```
 > ---------------------------------------------------------------------------------------------
 
 
 
-
-
-vi /etc/ssh/sshd_config
-vi /etc/selinux/config
 
 iptables -L
 vi /etc/rc.d/rc.local
