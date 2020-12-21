@@ -52,25 +52,45 @@
 >  >```
 > ---------------------------------------------------------------------------------------------
 
+## 방화벽 해제
+> ---------------------------------------------------------------------------------------------
+>  >
+>  >```
+>  >   # 개발 및 테스트 목적으로 해제한 상태로 사용
+>  >   
+>  >   shell> iptables -F
+>  >   
+>  >```
+> ---------------------------------------------------------------------------------------------
 
+## yum 을 이용하여 기존 설치된 패키지의 Update 및 필요한 패키지 설치
+> ---------------------------------------------------------------------------------------------
+>  >
+>  >```
+>  >   shell> yum update -y
+>  >   shell> yum group install -y "Development Tools"
+>  >   shell> yum install -y net-tools
+>  >   shell> yum install -y bind-utils
+>  >   shell> yum install -y rsync
+>  >   shell> yum install -y wget
+>  >   
+>  >   shell> iptables -F
+>  >   
+>  >```
+> ---------------------------------------------------------------------------------------------
 
+## yum 을 이용한 docker 설치 및 서비스 시작
+> ---------------------------------------------------------------------------------------------
+>  >
+>  >```
+>  >   shell> yum install docker docker-registry
+>  >   shell> systemctl enable docker.service
+>  >   shell> systemmctl start docker.service
+>  >   shell> systemctl status docker
+>  >   
+>  >```
+> ---------------------------------------------------------------------------------------------
 
-iptables -L
-vi /etc/rc.d/rc.local
-chmod 701 /etc/rc.d/rc.local
-reboot
-
-yum update -y
-yum group install -y "Development Tools"
-yum install -y net-tools
-yum install -y bind-utils
-yum install -y rsync
-yum install -y wget
-yum install docker docker-registry
-
-systemctl enable docker.service
-systemmctl start docker.service
-systemctl status docker
 
 
 docker search a84146943/centos7-httpd2.4-php7.2:latest
