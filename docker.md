@@ -97,7 +97,16 @@
 >  >```
 > ---------------------------------------------------------------------------------------------
 
-
+## 경험한 장애 유형
+> ---------------------------------------------------------------------------------------------
+>  > # Apache 컨테이너가 실행중인데 http 접속이 안되는 경우( 브라우져에서 접속 등 )
+>  >```
+>  >   shell> docker search a84146943/centos7-httpd2.4-php7.2:latest
+>  >   shell> docker pull a84146943/centos7-httpd2.4-php7.2
+>  >   shell> docker run -dit --name centos7  -p [HOST IP ADDR]:[PORT]:[ContainerPort] --privileged -e container=docker -v /sys/fs/cgroup:/sys/fs/cgroup:ro [이미지아이디] /usr/sbin/init
+>  >   shell> docker exec -it centos7 /bin/bash
+>  >```
+> ---------------------------------------------------------------------------------------------
 
 
 
