@@ -29,7 +29,7 @@
 
 ## selinux 해제
 > ---------------------------------------------------------------------------------------------
->  >view 
+>  >
 >  >```
 >  >   # 개발 및 테스트 목적으로 해제한 상태로 사용
 >  >   
@@ -47,8 +47,8 @@
 >  > #     minimum - Modification of targeted policy. Only selected processes are protected.
 >  > #     mls - Multi Level Security protection.
 >  > SELINUXTYPE=targeted
->  >   .
 >  > 
+>  >   shell> reboot
 >  >```
 > ---------------------------------------------------------------------------------------------
 
