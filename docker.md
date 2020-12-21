@@ -4,14 +4,9 @@
 > ---------------------------------------------------------------------------------------------
 >  >
 >  >```
->  >   # 현재 작업중인 브랜치를 삭제하고자 하여 발생한 오류 다른 브랜치로 전환후 삭제 실행
->  >   
 >  >   shell> yum install -y openssh-server
->  >
 >  >   shell> yum install -y openssh-client
->  >
 >  >   shell> yum install -y openssh-askpass
->  >   
 >  >   shell> vi /etc/ssh/sshd_config
 >  >   .
 >  >   .
@@ -91,11 +86,25 @@
 >  >```
 > ---------------------------------------------------------------------------------------------
 
+## docker 를 이용한 Apache Web Service Container 생성하기
+> ---------------------------------------------------------------------------------------------
+>  >
+>  >```
+>  >   shell> docker search a84146943/centos7-httpd2.4-php7.2:latest
+>  >   shell> docker pull a84146943/centos7-httpd2.4-php7.2
+>  >   shell> docker run -dit --name centos7  -p [HOST IP ADDR]:[PORT]:[ContainerPort] --privileged -e container=docker -v /sys/fs/cgroup:/sys/fs/cgroup:ro [이미지아이디] /usr/sbin/init
+>  >   shell> docker exec -it centos7 /bin/bash
+>  >```
+> ---------------------------------------------------------------------------------------------
 
 
-docker search a84146943/centos7-httpd2.4-php7.2:latest
-docker run -dit --name centos7  -p 192.168.1.151:80:50080 --privileged -e container=docker -v /sys/fs/cgroup:/sys/fs/cgroup:ro e31efd6cc327 /usr/sbin/init
-docker exec -it centos7 /bin/bash
+
+
+
+
+
+
+
 
 
 
