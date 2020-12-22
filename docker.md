@@ -121,7 +121,7 @@
 >  >  >
 >  >  > ```
 >  >  >
->  >  > ##### docker 재시작
+>  >  > ##### docker 재시작 - centos 7
 >  >  > ```
 >  >  >
 >  >  > shell> systemctl restart docker
