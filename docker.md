@@ -130,7 +130,16 @@
 >  >  >
 >  >  > ```
 >  >  >
->  >  > ##### container 내부 apache 실행여부 확인
+>  >  > ##### docker 재시작 - MacOS ( Macbook )
+>  >  > ```
+>  >  >
+>  >  > shell> killall Docker && open /Applications/Docker.app
+>  >  > shell> open --background -a Docker
+>  >  > shell> docker start [CONTAINER_ID]
+>  >  > 
+>  >  > ```
+>  >  > 
+>  >  >##### container 내부 apache 실행여부 확인
 >  >  > ```
 >  >  >
 >  >  > shell> docker exec -it [CONTAINER_ID] /bin/bash
