@@ -3,8 +3,13 @@
 
 ## PHPStorm Setting
 >
->  > FTP/SFTP - RemoteWork Setting And short cut example (./PhpStormSetting.md)
->
+>  - FTP/SFTP - RemoteWork Setting And short cut example (./PhpStormSetting.md)
+>  >  >내용
+>  >```
+>  > FTP / SFTP 설정
+>  > 단축키 설정
+>  >```
+
 
 ## PHP
 >
