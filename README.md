@@ -1,36 +1,10 @@
 # How To
 
 
-## PHPStorm - FTP/SFTP - RemoteWork Setting And short cut example
+## PHPStorm Setting
 >
->  > [How to Setting ]FTP/SFTP - RemoteWork Setting And short cut example (./backupscript.md)
->  > 
->  >  >설정값 확인
->  >```
->  >   $ cat /etc/php.ini | grep memory_limit
->  >   memory_limit = 128M
->  >
->  >```
->  >  >해결방법 1. /etc/php.ini 설정파일 내부 메모리 제한 확장 변경
->  >```
->  >   $ vi /etc/php.ini
->  >
->  >   ;memory_limit = 128M
->  >   memory_limit = 512M
->  >   
->  >   $ systemctl restart httpd
->  >   
->  >```
->  >  >해결방법 2. 메모리 부족이 발생하는 실행파일 안에서 메모리 제한 확장
->  >```
->  >   <?php
->  >   ini_set('memory_limit','512M');
->  >   
->  >   ini_set('memory_limit','-1');  // 메모리 제한 무제한으로 설정
->  >
->  >   ?>
->  >   
->  >```
+>  > FTP/SFTP - RemoteWork Setting And short cut example (./PhpStormSetting.md)
+>
 
 ## PHP
 >
