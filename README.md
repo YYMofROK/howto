@@ -1,9 +1,10 @@
 # How To
 
 
-## PHP
->  - [PHPStorm] - FTP/SFTP - RemoteWork Setting And short cut example
->  > FTP/SFTP - RemoteWork Setting And short cut example (./backupscript.md)
+## PHPStorm - FTP/SFTP - RemoteWork Setting And short cut example
+>
+>  > [How to Setting ]FTP/SFTP - RemoteWork Setting And short cut example (./backupscript.md)
+>  > 
 >  >  >설정값 확인
 >  >```
 >  >   $ cat /etc/php.ini | grep memory_limit
@@ -30,6 +31,8 @@
 >  >   ?>
 >  >   
 >  >```
+
+## PHP
 >
 >  - [PHP 메모리 부족] Fatal error: Allowed memory size of 134217728 bytes
 >
