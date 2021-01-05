@@ -3,7 +3,7 @@
 >  - [open ssl 무료 인증서] https://letsencrypt.org/ko/getting-started/
 >
 >  >  >설정값 확인
->  >```
+```
 $ sudo yum install snapd
 $ sudo ln -s /var/lib/snapd/snap /snap
 $ sudo snap install core
@@ -22,7 +22,7 @@ $ certbot certonly
          -d *.addrgo.com
 
 
->  >```
+```
 >
 
 
