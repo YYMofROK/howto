@@ -1,42 +1,34 @@
+## https://letsencrypt.org/ko/getting-started/
+>
+>  - [open ssl 무료 인증서] https://letsencrypt.org/ko/getting-started/
+>
+>  >  >설정값 확인
+>  >```
+>  >   # sudo yum install snapd
+>  >   # sudo ln -s /var/lib/snapd/snap /snap
+>  >   # sudo snap install core
+>  >   # sudo snap refresh core
+>  >   # sudo yum remove certbot
+>  >   # sudo snap install --classic certbot
+>  >   # sudo ln -s /snap/bin/certbot /usr/bin/certbot
+>  >   # sudo snap set certbot trust-plugin-with-root=ok
+>  >   # sudo snap install certbot-dns-route53
+>  >   # certbot renew --dry-run
+>  >   # certbot certonly 
+         --manual
+         --preferred-challenges dns
+         --server https://acme-v02.api.letsencrypt.org/directory --agree-tos
+         -m a84146943@gmail.com
+         -d *.addrgo.com
 
-https://letsencrypt.org/ko/getting-started/
+
+>  >```
+>
 
 
 
-[root@ip-172-31-13-162 ~]#
-[root@ip-172-31-13-162 ~]#
-[root@ip-172-31-13-162 ~]#
-[root@ip-172-31-13-162 ~]# sudo yum install snapd
-[root@ip-172-31-13-162 ~]#
-[root@ip-172-31-13-162 ~]# sudo ln -s /var/lib/snapd/snap /snap
-[root@ip-172-31-13-162 ~]#
-[root@ip-172-31-13-162 /]# sudo snap install core
-[root@ip-172-31-13-162 ~]#
-[root@ip-172-31-13-162 /]# sudo snap refresh core
-[root@ip-172-31-13-162 ~]#
-[root@ip-172-31-13-162 /]# sudo yum remove certbot.
-[root@ip-172-31-13-162 ~]#
-[root@ip-172-31-13-162 /]# sudo snap install --classic certbot
-[root@ip-172-31-13-162 ~]#
-[root@ip-172-31-13-162 /]# sudo ln -s /snap/bin/certbot /usr/bin/certbot
-[root@ip-172-31-13-162 ~]#
-[root@ip-172-31-13-162 /]# sudo snap set certbot trust-plugin-with-root=ok
-[root@ip-172-31-13-162 ~]#
-[root@ip-172-31-13-162 /]# sudo snap install certbot-dns-route53
-[root@ip-172-31-13-162 ~]#
-[root@ip-172-31-13-162 /]# certbot renew --dry-run
-Saving debug log to /var/log/letsencrypt/letsencrypt.log
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-** DRY RUN: simulating 'certbot renew' close to cert expiry
-**          (The test certificates below have not been saved.)
 
-No renewals were attempted.
-** DRY RUN: simulating 'certbot renew' close to cert expiry
-**          (The test certificates above have not been saved.)
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-[root@ip-172-31-13-162 /]#
-[root@ip-172-31-13-162 /]# certbot certonly --manual --preferred-challenges dns --server https://acme-v02.api.letsencrypt.org/directory --agree-tos -m a84146943@gmail.com -d *.addrgo.com
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
 Plugins selected: Authenticator manual, Installer None
 
