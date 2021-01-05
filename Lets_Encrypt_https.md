@@ -2,7 +2,7 @@
 >
 >  - [open ssl 무료 인증서] https://letsencrypt.org/ko/getting-started/
 >
->  >  >설정값 확인
+>  >  > 설치 스크립트
 ```
 $ sudo yum install snapd
 $ sudo ln -s /var/lib/snapd/snap /snap
