@@ -2,7 +2,7 @@
 >
 >  - [open ssl 무료 인증서] https://letsencrypt.org/ko/getting-started/
 >
->  >  > 설치 스크립트
+>  >  설치 스크립트
 ```
 $ sudo yum install snapd
 $ sudo ln -s /var/lib/snapd/snap /snap
@@ -18,102 +18,14 @@ $ certbot certonly
          --manual
          --preferred-challenges dns
          --server https://acme-v02.api.letsencrypt.org/directory --agree-tos
-         -m a84146943@gmail.com
-         -d *.addrgo.com
-
-
-```
->
-
-
-
-
+         -m [ E-Mail Address ]
+         -d [ DOMAIN NAME ]
 
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
 Plugins selected: Authenticator manual, Installer None
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Would you be willing, once your first certificate is successfully issued, to
-share your email address with the Electronic Frontier Foundation, a founding
-partner of the Let's Encrypt project and the non-profit organization that
-develops Certbot? We'd like to send you email about our work encrypting the web,
-EFF news, campaigns, and ways to support digital freedom.
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-(Y)es/(N)o: Y
-Account registered.
-Requesting a certificate for *.addrgo.com
+Requesting a certificate for [ DOMAIN NAME ]
 Performing the following challenges:
-dns-01 challenge for addrgo.com
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Please deploy a DNS TXT record under the name
-_acme-challenge.addrgo.com with the following value:
-
-dyzlURZlB1HTRGYqWRyqMdcVWUycW3Jjt7zhDf-DQHw
-
-Before continuing, verify the record is deployed.
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Press Enter to Continue
-Waiting for verification...
-Challenge failed for domain addrgo.com
-dns-01 challenge for addrgo.com
-Cleaning up challenges
-Some challenges have failed.
-
-IMPORTANT NOTES:
- - The following errors were reported by the server:
-
-   Domain: addrgo.com
-   Type:   dns
-   Detail: DNS problem: NXDOMAIN looking up TXT for
-   _acme-challenge.addrgo.com - check that a DNS record exists for
-   this domain
-[root@ip-172-31-13-162 /]#
-[root@ip-172-31-13-162 /]#
-[root@ip-172-31-13-162 /]# certbot certonly --manual --preferred-challenges dns --server https://acme-v02.api.letsencrypt.org/directory --agree-tos -m a84146943@gmail.com -d *.addrgo.com
-Saving debug log to /var/log/letsencrypt/letsencrypt.log
-Plugins selected: Authenticator manual, Installer None
-Requesting a certificate for *.addrgo.com
-Performing the following challenges:
-dns-01 challenge for addrgo.com
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Please deploy a DNS TXT record under the name
-_acme-challenge.addrgo.com with the following value:
-
-Ii8kBDA3qxqMX9yvLUI9afvGKVhsT_R3qfx0xynFp5E
-
-Before continuing, verify the record is deployed.
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Press Enter to Continue
-Waiting for verification...
-Challenge failed for domain addrgo.com
-dns-01 challenge for addrgo.com
-Cleaning up challenges
-Some challenges have failed.
-
-IMPORTANT NOTES:
- - The following errors were reported by the server:
-
-   Domain: addrgo.com
-   Type:   unauthorized
-   Detail: Incorrect TXT record
-   "dyzlURZlB1HTRGYqWRyqMdcVWUycW3Jjt7zhDf-DQHw" found at
-   _acme-challenge.addrgo.com
-
-   To fix these errors, please make sure that your domain name was
-   entered correctly and the DNS A/AAAA record(s) for that domain
-   contain(s) the right IP address.
-[root@ip-172-31-13-162 /]#
-[root@ip-172-31-13-162 /]#
-[root@ip-172-31-13-162 /]#
-[root@ip-172-31-13-162 /]#
-[root@ip-172-31-13-162 /]# certbot certonly --manual --preferred-challenges dns --server https://acme-v02.api.letsencrypt.org/directory --agree-tos -m a84146943@gmail.com -d *.addrgo.com
-Saving debug log to /var/log/letsencrypt/letsencrypt.log
-Plugins selected: Authenticator manual, Installer None
-Requesting a certificate for *.addrgo.com
-Performing the following challenges:
-dns-01 challenge for addrgo.com
+dns-01 challenge for [ DOMAIN NAME ]
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 Please deploy a DNS TXT record under the name
@@ -126,13 +38,13 @@ Before continuing, verify the record is deployed.
 Press Enter to Continue
 Waiting for verification...
 Cleaning up challenges
-Subscribe to the EFF mailing list (email: a84146943@gmail.com).
+Subscribe to the EFF mailing list (email: [  E-Mail Address ]).
 
 IMPORTANT NOTES:
  - Congratulations! Your certificate and chain have been saved at:
-   /etc/letsencrypt/live/addrgo.com/fullchain.pem
+   /etc/letsencrypt/live/[ DOMAIN NAME ]/fullchain.pem
    Your key file has been saved at:
-   /etc/letsencrypt/live/addrgo.com/privkey.pem
+   /etc/letsencrypt/live/[ DOMAIN NAME ]/privkey.pem
    Your cert will expire on 2021-04-05. To obtain a new or tweaked
    version of this certificate in the future, simply run certbot
    again. To non-interactively renew *all* of your certificates, run
@@ -142,26 +54,23 @@ IMPORTANT NOTES:
    Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
    Donating to EFF:                    https://eff.org/donate-le
 
-[root@ip-172-31-13-162 /]#
-[root@ip-172-31-13-162 /]#
-[root@ip-172-31-13-162 /]#
-[root@ip-172-31-13-162 /]# cd /etc/letsencrypt/live/addrgo.com/
-[root@ip-172-31-13-162 addrgo.com]#
-[root@ip-172-31-13-162 addrgo.com]#
-[root@ip-172-31-13-162 addrgo.com]# ls -al
+$ cd /etc/letsencrypt/live/[ DOMAIN NAME ]
+$ ls -al
+
 total 4
 drwxr-xr-x 2 root root  93 Jan  5 03:09 .
 drwx------ 3 root root  38 Jan  5 03:09 ..
-lrwxrwxrwx 1 root root  34 Jan  5 03:09 cert.pem -> ../../archive/addrgo.com/cert1.pem
-lrwxrwxrwx 1 root root  35 Jan  5 03:09 chain.pem -> ../../archive/addrgo.com/chain1.pem
-lrwxrwxrwx 1 root root  39 Jan  5 03:09 fullchain.pem -> ../../archive/addrgo.com/fullchain1.pem
-lrwxrwxrwx 1 root root  37 Jan  5 03:09 privkey.pem -> ../../archive/addrgo.com/privkey1.pem
+lrwxrwxrwx 1 root root  34 Jan  5 03:09 cert.pem -> ../../archive/[ DOMAIN NAME ]/cert1.pem
+lrwxrwxrwx 1 root root  35 Jan  5 03:09 chain.pem -> ../../archive/[ DOMAIN NAME ]/chain1.pem
+lrwxrwxrwx 1 root root  39 Jan  5 03:09 fullchain.pem -> ../../archive/[ DOMAIN NAME ]/fullchain1.pem
+lrwxrwxrwx 1 root root  37 Jan  5 03:09 privkey.pem -> ../../archive/[ DOMAIN NAME ]/privkey1.pem
 -rw-r--r-- 1 root root 692 Jan  5 03:09 README
-[root@ip-172-31-13-162 addrgo.com]#
-[root@ip-172-31-13-162 addrgo.com]# openssl verify -CAfile chain.pem cert.pem
+
+$ openssl verify -CAfile chain.pem cert.pem
 cert.pem: C = US, O = Let's Encrypt, CN = R3
 error 2 at 1 depth lookup:unable to get issuer certificate
-[root@ip-172-31-13-162 addrgo.com]# wget http://apps.identrust.com/roots/dstrootcax3.p7c
+
+$ wget http://apps.identrust.com/roots/dstrootcax3.p7c
 --2021-01-05 03:15:05--  http://apps.identrust.com/roots/dstrootcax3.p7c
 Resolving apps.identrust.com (apps.identrust.com)... 192.35.177.64
 Connecting to apps.identrust.com (apps.identrust.com)|192.35.177.64|:80... connected.
@@ -173,10 +82,7 @@ Saving to: ‘dstrootcax3.p7c’
 
 2021-01-05 03:15:06 (102 MB/s) - ‘dstrootcax3.p7c’ saved [893/893]
 
-[root@ip-172-31-13-162 addrgo.com]#
-[root@ip-172-31-13-162 addrgo.com]#
-[root@ip-172-31-13-162 addrgo.com]#
-[root@ip-172-31-13-162 addrgo.com]# ls -al
+$ ls -al
 total 8
 drwxr-xr-x 2 root root 116 Jan  5 03:15 .
 drwx------ 3 root root  38 Jan  5 03:09 ..
@@ -186,11 +92,21 @@ lrwxrwxrwx 1 root root  35 Jan  5 03:09 chain.pem -> ../../archive/addrgo.com/ch
 lrwxrwxrwx 1 root root  39 Jan  5 03:09 fullchain.pem -> ../../archive/addrgo.com/fullchain1.pem
 lrwxrwxrwx 1 root root  37 Jan  5 03:09 privkey.pem -> ../../archive/addrgo.com/privkey1.pem
 -rw-r--r-- 1 root root 692 Jan  5 03:09 README
-[root@ip-172-31-13-162 addrgo.com]# openssl pkcs7 -inform der -in dstrootcax3.p7c -out dstrootcax3.pem -print_certs
-[root@ip-172-31-13-162 addrgo.com]# cp fullchain.pem fullca.pem
-[root@ip-172-31-13-162 addrgo.com]# cat dstrootcax3.pem >> fullca.pem
-[root@ip-172-31-13-162 addrgo.com]# openssl verify -CAfile fullca.pem cert.pem
+
+
+$ openssl pkcs7 -inform der -in dstrootcax3.p7c -out dstrootcax3.pem -print_certs
+$ cp fullchain.pem fullca.pem
+$ cat dstrootcax3.pem >> fullca.pem
+$ openssl verify -CAfile fullca.pem cert.pem
 cert.pem: OK
+
+```
+>
+
+
+
+
+
 [root@ip-172-31-13-162 addrgo.com]#
 [root@ip-172-31-13-162 addrgo.com]#
 [root@ip-172-31-13-162 addrgo.com]#
