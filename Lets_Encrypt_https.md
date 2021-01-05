@@ -4,17 +4,17 @@
 >
 >  >  >설정값 확인
 >  >```
-# sudo yum install snapd
->  >   # sudo ln -s /var/lib/snapd/snap /snap
->  >   # sudo snap install core
->  >   # sudo snap refresh core
->  >   # sudo yum remove certbot
->  >   # sudo snap install --classic certbot
->  >   # sudo ln -s /snap/bin/certbot /usr/bin/certbot
->  >   # sudo snap set certbot trust-plugin-with-root=ok
->  >   # sudo snap install certbot-dns-route53
->  >   # certbot renew --dry-run
->  >   # certbot certonly 
+$ sudo yum install snapd
+$ sudo ln -s /var/lib/snapd/snap /snap
+$ sudo snap install core
+$ sudo snap refresh core
+$ sudo yum remove certbot
+$ sudo snap install --classic certbot
+$ sudo ln -s /snap/bin/certbot /usr/bin/certbot
+$ sudo snap set certbot trust-plugin-with-root=ok
+$ sudo snap install certbot-dns-route53
+$ certbot renew --dry-run
+$ certbot certonly 
          --manual
          --preferred-challenges dns
          --server https://acme-v02.api.letsencrypt.org/directory --agree-tos
