@@ -36,7 +36,7 @@
 >  >  
 >  >```
 >  >
->  > JAVA
+>  > kotlin
 >  >```
 >  >  private fun hideSystemUI() {
 >  >      // Enables regular immersive mode.
@@ -61,6 +61,7 @@
 >  >              or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN)
 >  >  }
 >  >```
+>  >
 >
 
 
