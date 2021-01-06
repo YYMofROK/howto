@@ -4,6 +4,7 @@
 >
 >  >  설치 스크립트
 ```
+$
 $ sudo yum install snapd
 $ sudo ln -s /var/lib/snapd/snap /snap
 $ sudo snap install core
@@ -20,6 +21,7 @@ $ certbot certonly
          --server https://acme-v02.api.letsencrypt.org/directory --agree-tos
          -m [ E-Mail Address ]
          -d [ DOMAIN NAME ]
+$
 
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
 Plugins selected: Authenticator manual, Installer None
@@ -53,10 +55,10 @@ IMPORTANT NOTES:
 
    Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
    Donating to EFF:                    https://eff.org/donate-le
-
+$
 $ cd /etc/letsencrypt/live/[ DOMAIN NAME ]
 $ ls -al
-
+$
 total 4
 drwxr-xr-x 2 root root  93 Jan  5 03:09 .
 drwx------ 3 root root  38 Jan  5 03:09 ..
@@ -65,12 +67,13 @@ lrwxrwxrwx 1 root root  35 Jan  5 03:09 chain.pem -> ../../archive/[ DOMAIN NAME
 lrwxrwxrwx 1 root root  39 Jan  5 03:09 fullchain.pem -> ../../archive/[ DOMAIN NAME ]/fullchain1.pem
 lrwxrwxrwx 1 root root  37 Jan  5 03:09 privkey.pem -> ../../archive/[ DOMAIN NAME ]/privkey1.pem
 -rw-r--r-- 1 root root 692 Jan  5 03:09 README
-
+$
 $ openssl verify -CAfile chain.pem cert.pem
 cert.pem: C = US, O = Let's Encrypt, CN = R3
 error 2 at 1 depth lookup:unable to get issuer certificate
-
+$
 $ wget http://apps.identrust.com/roots/dstrootcax3.p7c
+$
 --2021-01-05 03:15:05--  http://apps.identrust.com/roots/dstrootcax3.p7c
 Resolving apps.identrust.com (apps.identrust.com)... 192.35.177.64
 Connecting to apps.identrust.com (apps.identrust.com)|192.35.177.64|:80... connected.
@@ -81,8 +84,9 @@ Saving to: ‘dstrootcax3.p7c’
 100%[====================================================================================================================================================================================>] 893         --.-K/s   in 0s
 
 2021-01-05 03:15:06 (102 MB/s) - ‘dstrootcax3.p7c’ saved [893/893]
-
+$
 $ ls -al
+$
 total 8
 drwxr-xr-x 2 root root 116 Jan  5 03:15 .
 drwx------ 3 root root  38 Jan  5 03:09 ..
@@ -93,27 +97,25 @@ lrwxrwxrwx 1 root root  39 Jan  5 03:09 fullchain.pem -> ../../archive/addrgo.co
 lrwxrwxrwx 1 root root  37 Jan  5 03:09 privkey.pem -> ../../archive/addrgo.com/privkey1.pem
 -rw-r--r-- 1 root root 692 Jan  5 03:09 README
 
-
+$
 $ openssl pkcs7 -inform der -in dstrootcax3.p7c -out dstrootcax3.pem -print_certs
 $ cp fullchain.pem fullca.pem
 $ cat dstrootcax3.pem >> fullca.pem
 $ openssl verify -CAfile fullca.pem cert.pem
 cert.pem: OK
-
+$
 ```
 >
 
-
-
-
-
-[root@ip-172-31-13-162 addrgo.com]#
-[root@ip-172-31-13-162 addrgo.com]#
-[root@ip-172-31-13-162 addrgo.com]#
-[root@ip-172-31-13-162 addrgo.com]#
-[root@ip-172-31-13-162 addrgo.com]#
-[root@ip-172-31-13-162 addrgo.com]#
-[root@ip-172-31-13-162 addrgo.com]# yum install mod_ssl -y
+## Apache open-ssl 인증서 설치
+>
+>  >  설치 스크립트
+```
+```
+>
+$
+$ yum install mod_ssl -y
+$
 Loaded plugins: fastestmirror
 Loading mirror speeds from cached hostfile
  * base: d36uatko69830t.cloudfront.net
@@ -181,11 +183,12 @@ Dependency Updated:
   httpd.x86_64 0:2.4.6-97.el7.centos                                                                         httpd-tools.x86_64 0:2.4.6-97.el7.centos
 
 Complete!
-[root@ip-172-31-13-162 conf.d]#
-[root@ip-172-31-13-162 conf.d]#
-[root@ip-172-31-13-162 conf.d]# systemctl restart httpd
-[root@ip-172-31-13-162 conf.d]#
-[root@ip-172-31-13-162 conf.d]# cat vhost_03_android_info.conf
+
+$
+$ systemctl restart httpd
+$ cat vhost_03_android_info.conf
+$
+
 #<VirtualHost *:80>
 #    ServerName   android.addrgo.com
 #    DocumentRoot /home/android/public_html
@@ -218,4 +221,3 @@ Complete!
 
 </VirtualHost>
 
-[root@ip-172-31-13-162 conf.d]#
