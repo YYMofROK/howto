@@ -5,7 +5,7 @@
 >
 >  - [전체화면] Full screen mode 전체화면 설정, 해제
 >  >
->  > JAVA
+>  >  > JAVA
 >  >```
 >  >  private void hideSystemUI() {
 >  >      // Enables regular immersive mode.
@@ -36,7 +36,7 @@
 >  >  
 >  >```
 >  >
->  > kotlin
+>  >  > kotlin
 >  >```
 >  >  private fun hideSystemUI() {
 >  >      // Enables regular immersive mode.
