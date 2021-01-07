@@ -48,6 +48,8 @@ $ composer global require hirak/prestissimo
 
 # @ 패키지 설치
 $ composer create-project laravel/laravel /home/[ TEST ]/public_html/app/
+
+# @ 구글 API 모듈 설치
 $ composer require google/apiclient:"^2.7"
 ```
 ### step2 - Apache Vertual host 설정
