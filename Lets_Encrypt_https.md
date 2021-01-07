@@ -111,8 +111,6 @@ $
 >
 >  >  설치 스크립트
 ```
-```
->
 $
 $ yum install mod_ssl -y
 $
@@ -220,4 +218,7 @@ $
        </Directory>
 
 </VirtualHost>
+```
+>
+
 
