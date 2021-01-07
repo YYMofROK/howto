@@ -4,8 +4,9 @@
 >
 >  >  설치 스크립트
 ```
+
 $
-$ sudo yum install snapd
+* $ sudo yum install snapd *
 $ sudo ln -s /var/lib/snapd/snap /snap
 $ sudo snap install core
 $ sudo snap refresh core
@@ -22,6 +23,7 @@ $ certbot certonly
          -m [ E-Mail Address ]
          -d [ DOMAIN NAME ]
 $
+
 
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
 Plugins selected: Authenticator manual, Installer None
