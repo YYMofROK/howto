@@ -1,7 +1,7 @@
 # How To
 
 
-## 안드로이드
+## Android ( 안드로이드 )
 >
 >  - [전체화면] Full screen mode 전체화면 설정, 해제
 >  >
@@ -117,7 +117,7 @@
 >  >```
 >
 
-## Shell Script
+## [centos7]Shell Script
 >  - [How to connect ssh]
 >  >  > shell 에서 ssh 원격 접속 샘플 - 조금응용하면 스크립트화 가능
 >  >```
@@ -141,7 +141,7 @@
 >
 
 
-## nodejs
+## [centos7]nodejs
 >  - [How to nodejs install_use_nvm](./centos7_nodejs_install_use_nvm.md)
 >  >  > nvm 을 이용한 nodejs 설치 
 >
@@ -150,7 +150,7 @@
 >
 
 
-## Laravel
+## [centos7]Laravel
 >  - [How to Laravel install](./centos7_laravel_install.md)
 >  >  > 라라벨 설치
 >
@@ -158,7 +158,7 @@
 >  >  > 라라벨 
 >
 
-## Network
+## [centos7]Network
 >  - [How to Checking ip address on Centos7](./how_to_checking_ip_address.md)  
 >  >  > ip 주소 확인하기
 >
@@ -169,7 +169,7 @@
 >  >  > 네트워크 경로 
 >
 
-## Scheduler ( cron )
+## [centos7]Scheduler ( cron )
 >  - crontab -l
 >
 >  >  >현재 사용자의 crontab 설정 내용 확인
@@ -186,12 +186,12 @@
 >  >
 >
 
-## Apache PHP MariaDB install
+## [centos7]Apache PHP MariaDB install
 >  - [How to APM install on Centos7](./centos7_apmsetup.sh)
 >  >  > 아파치 PHP 마리아DB 설치 스크립트 정리
 >
 
-## File System ( Centos7 )
+## [centos7]File System ( Centos7 )
 >  - [Find - Search File](./search_file.md) 
 >  >  >파일 또는 디렉토리 찾기
 >
