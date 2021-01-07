@@ -107,9 +107,9 @@ $
 ```
 >
 
-## Apache open-ssl 인증서 설치
+## Apache open-ssl 인증서 적용
 >
->  >  설치 스크립트
+>  >  mod_ssl 모듈 설치
 ```
 $
 $ yum install mod_ssl -y
@@ -184,6 +184,11 @@ Complete!
 
 $
 $ systemctl restart httpd
+$
+```
+>  >  Apache Virtual Host 설정
+```
+$
 $ cat vhost_03_android_info.conf
 $
 
