@@ -96,6 +96,7 @@
 >  >   $ vi /etc/php.ini
 >  >
 >  >   ;memory_limit = 128M
+>  >   ;memory_limit = -1     ; 메모리 무제한
 >  >   memory_limit = 512M
 >  >   
 >  >   $ systemctl restart httpd
