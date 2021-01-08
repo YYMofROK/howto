@@ -3,6 +3,24 @@
 
 ## Android ( 안드로이드 )
 >
+>  - [Webview] history back 실행시 재생중인 오디오 중지하기
+>  >
+>  >  > JAVA
+>  >```
+>  >  @Override
+>  >  protected void onPause() {
+>  >      super.onPause();
+>  >      ((AudioManager)getSystemService(
+>  >              Context.AUDIO_SERVICE)).requestAudioFocus(
+>  >                      new OnAudioFocusChangeListener() {
+>  >                          @Override
+>  >                          public void onAudioFocusChange(int focusChange) {}
+>  >                      }, AudioManager.STREAM_MUSIC, 
+>  >                      AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
+>  >  
+>  >  }
+>  >```
+>  >
 >  - [전체화면] Full screen mode 전체화면 설정, 해제
 >  >
 >  >  > JAVA
