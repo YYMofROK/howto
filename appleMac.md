@@ -20,3 +20,6 @@ DNS cache 를 갱신한다.
 이제 hosts 파일이 수정하면 재부팅하거나, dscacheutil -flushcache 를 입력하면 바로 적용 하실 수 있다.
 $ dscacheutil -flushcache
 
+
+
+https://ninanung0503.medium.com/apple-silicon-m1-mac%EC%97%90-homebrew-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0-7b6c0d3aba08
