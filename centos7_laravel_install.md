@@ -49,7 +49,7 @@ $ composer global require hirak/prestissimo
 # @ 패키지 설치
 $ composer create-project laravel/laravel /home/[ TEST ]/public_html/app/
 
-# @ Socialite 업그레이드하기
+# @ Socialite 모듈 설치
 $ composer require laravel/socialite
 
 # @ 구글 API 모듈 설치
