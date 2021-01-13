@@ -73,11 +73,18 @@ systemctl enable mariadb
 systemctl start mariadb
 mysql_secure_installation
 
-# -폐기- MariaDB install - use rpm ( yum )
-# -폐기- yum -y install mariadb-*
 
 
-
+#-----------------------------------------------------------------------
+#
+# MySQL(Maria DB) root 계정 외부접속 허용설정하기
+#
+# 1. MySQL(Maria DB) 로 접속 한다.
+# 2. use mysql 명령어를 입력한다.
+# 3. grant all privileges on *.* to 'root'@'%' identified by '비밀번호'; 입력한다.
+# 4. flush privileges; 입력한다.
+# 5. my.cnf 파일 내용중에서 bind-address =127.0.0.1 을 주석(#)처리 하고 저장한다.
+#     bind-address = 127.0.0.1 => #bind-address = 127.0.0.1
 #-----------------------------------------------------------------------
 
 
