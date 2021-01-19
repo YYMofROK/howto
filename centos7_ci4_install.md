@@ -83,45 +83,47 @@ $ yum install -y php-xmlrpc.x86_64
 $ systemctl restart httpd
 ```
 >
+> Composer 설치
 >
->
->
->
->
+```
+- root 권한 취득
+$ su root
+
+- composer 설치
+$ yum install -y composer
+
+-composer 명령어 사용을 위한 system PATH 경로 설정 및 설정 결과 확인
+$ PATH=$PATH:/root/.config/composer/vendor/bin
+$ echo $PATH
+
+-/root-사용자로-Composer-사용시-Do-not-run-Composer-as-rootsuper-user-에러가-발생할때-강제로-사용하는-방법
+$ export COMPOSER_ALLOW_SUPERUSER=1
+$ composer global about
+
+-이 명령어로 global config에 repos.packagist 를 추가한다.
+$ composer config -g repos.packagist composer https://packagist.jp
+
+-설정이 되었는지 확인한다.
+$ composer config -gl|grep repo
+
+-아래 설정이 보이면 추가가 된 것이다.
+-[repositories.packagist.org.type] composer
+-[repositories.packagist.org.url] https://packagist.jp
+
+-캐시 초기화
+$ composer global clear-cache
+$ composer clear-cache
+
+-다운로드 속도 향상
+-병렬 다운로드를 가능하게 하는 hirak/prestissimo 패키지를 설치하자.
+-288s -> 26s 가 되는 마법이 일어난다고 한다.
+$ composer global require hirak/prestissimo
+
+```
 >
 >
 >-----------------------------------------------------------------------
 
-
-/************************
- * sftp 설치
- ************************/
-yum install -y vsftpd
-systemctl enable vsftpd
-
-/************************
- * Maria DB 설치
- ************************/
-sudo vi /etc/yum.repos.d/MariaDB.repo
-
--아래 내용 입력후 저장
---------------------------- 시작 ---------------------------
-# MariaDB 10.3 CentOS repository list - created 2019-01-13 00:47 UTC
-# http://downloads.mariadb.org/mariadb/repositories/
-[mariadb]
-name = MariaDB
-baseurl = http://yum.mariadb.org/10.3/centos7-amd64
-gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
-gpgcheck=1
---------------------------- 종료 ---------------------------
-
--repository 설정을 했으면 아래 명령으로 YUM을 통해서 Maria DB를 설치할 수 있다.
-
-yum install MariaDB-server MariaDB-client
-
-systemctl enable mariadb
-systemctl start mariadb
-mysql_secure_installation
 
 
 /************************
