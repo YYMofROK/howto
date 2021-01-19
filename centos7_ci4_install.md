@@ -21,6 +21,67 @@ $ yum install -y rsync
 $ yum install -y wget
 ```
 >
+> httpd( Apache ) 설치
+>
+```
+$ yum install -y httpd
+$ systemctl enable httpd
+$ systemctl start httpd
+```
+>
+> PHP7.2.x 
+>
+```
+$ wget -P /root https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+$ rpm -Uvh /root/epel-release-latest-7.noarch.rpm
+$ wget -P /root http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+$ rpm -Uvh /root/remi-release-7.rpm
+$ yum install -y yum-utils
+$ yum-config-manager --enable remi-php72
+$ yum install -y php
+$ yum install -y php-common
+$ yum install -y php-fpm
+$ yum install -y php-cli
+$ yum install -y php-redis
+$ yum install -y php-brotli
+$ yum install -y php-gd
+$ yum install -y php-xml
+$ yum install -y php-gmp
+$ yum install -y php-imap
+$ yum install -y php-bcmath
+$ yum install -y php-interbase
+$ yum install -y php-json
+$ yum install -y php-mbstring
+$ yum install -y php-mysqlnd
+$ yum install -y php-odbc
+$ yum install -y php-opcache
+$ yum install -y php-memcached
+$ yum install -y php-tidy
+$ yum install -y php-pdo
+$ yum install -y php-pdo-dblib
+$ yum install -y php-pear
+$ yum install -y php-pgsql
+$ yum install -y php-process
+$ yum install -y php-pecl-apcu
+$ yum install -y php-pecl-geoip
+$ yum install -y php-pecl-gmagick
+$ yum install -y php-pecl-hrtime
+$ yum install -y php-pecl-json
+$ yum install -y php-pecl-memcache
+$ yum install -y php-pecl-mongodb
+$ yum install -y php-pecl-rar
+$ yum install -y php-pecl-pq
+$ yum install -y php-pecl-redis4
+$ yum install -y php-pecl-yaml
+$ yum install -y php-pecl-zip
+$ yum install -y php-intl
+$ yum install -y php-pdo.x86_64
+$ yum install -y php-pdo-dblib.x86_64
+$ yum install -y php-pecl-imagick.x86_64
+$ yum install -y php-pecl-imagick-devel.x86_64
+$ yum install -y php-xmlrpc.x86_64
+$ systemctl restart httpd
+```
 >
 >
 >
@@ -29,69 +90,8 @@ $ yum install -y wget
 >
 >
 >
+>-----------------------------------------------------------------------
 
------------------------------------------------
-
-/************************
- * httpd 설치
- ************************/
-yum install -y httpd
-systemctl enable httpd
-systemctl start httpd
-
-/************************
- * php 설치
- ************************/
-wget -P /root https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-rpm -Uvh /root/epel-release-latest-7.noarch.rpm
-wget -P /root http://rpms.remirepo.net/enterprise/remi-release-7.rpm
-rpm -Uvh /root/remi-release-7.rpm
-yum install -y yum-utils
-yum-config-manager --enable remi-php72
-yum install -y php
-yum install -y php-common
-yum install -y php-fpm
-yum install -y php-cli
-yum install -y php-redis
-yum install -y php-brotli
-yum install -y php-gd
-yum install -y php-xml
-yum install -y php-gmp
-yum install -y php-imap
-yum install -y php-bcmath
-yum install -y php-interbase
-yum install -y php-json
-yum install -y php-mbstring
-yum install -y php-mysqlnd
-yum install -y php-odbc
-yum install -y php-opcache
-yum install -y php-memcached
-yum install -y php-tidy
-yum install -y php-pdo
-yum install -y php-pdo-dblib
-yum install -y php-pear
-yum install -y php-pgsql
-yum install -y php-process
-yum install -y php-pecl-apcu
-yum install -y php-pecl-geoip
-yum install -y php-pecl-gmagick
-yum install -y php-pecl-hrtime
-yum install -y php-pecl-json
-yum install -y php-pecl-memcache
-yum install -y php-pecl-mongodb
-yum install -y php-pecl-rar
-yum install -y php-pecl-pq
-yum install -y php-pecl-redis4
-yum install -y php-pecl-yaml
-yum install -y php-pecl-zip
-yum install -y php-intl
-yum install -y php-pdo.x86_64
-yum install -y php-pdo-dblib.x86_64
-yum install -y php-pecl-imagick.x86_64
-yum install -y php-pecl-imagick-devel.x86_64
-yum install -y php-xmlrpc.x86_64
-
-systemctl restart httpd
 
 /************************
  * sftp 설치
