@@ -1,29 +1,35 @@
 
 ### HTTP REQEUST CHECK
 >
->  > CentOS7에 Composer로 CodeIgniter4 설치 #####
+> CentOS7에 Composer로 CodeIgniter4 설치
 >
->  > SSH 모듈 설치
+> SSH 모듈 설치
 ```
 $ yum install -y openssh-server
 $ yum install -y openssh-clients
 $ yum install -y vopenssh-askpass
 ```
-
-```
-yum update -y
-yum group install -y "Development Tools"
-yum install -y net-tools
-yum install -y bind-utils
-yum install -y rsync
-yum install -y wget
-
-
-```
-
-
-
 >
+> CentOS7 기존 설치 패키지 최신화 및 개발도구 , 네트워크 도구 설치
+>
+```
+$ yum update -y
+$ yum group install -y "Development Tools"
+$ yum install -y net-tools
+$ yum install -y bind-utils
+$ yum install -y rsync
+$ yum install -y wget
+```
+>
+>
+>
+>
+>
+>
+>
+>
+>
+
 -----------------------------------------------
 
 /************************
