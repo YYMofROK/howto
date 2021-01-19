@@ -1,6 +1,11 @@
 # How To
 
 
+## [centos7]Codeignitor 4.x
+>  - [How to Codeignitor 4.x install](./centos7_ci4_install.md)
+>  >  > 라라벨 설치
+>
+
 ## Android ( 안드로이드 )
 >
 >  - [Webview] history back 실행시 재생중인 오디오 중지하기
@@ -158,15 +163,6 @@
 >
 >  - [How to Setting crawling environment](./centos7_nodejs_setting_crawling_environment.md)
 >  >  >  install chromium / puppeteer / cheerio / korean font
->
-
-
-## [centos7]Laravel
->  - [How to Laravel install](./centos7_laravel_install.md)
->  >  > 라라벨 설치
->
->  - [How to Laravel UploadedFile](./centos7_laravel_file_upload.md)
->  >  > 라라벨 
 >
 
 ## [centos7]Network
