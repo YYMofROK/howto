@@ -76,23 +76,20 @@
 >  >  }
 >  >  
 >  >```
->  > error: package com.google.android.gms.ads.identifier does not exist import com.google.android.gms.ads.identifier.AdvertisingIdClient;
+>  - error: package com.google.android.gms.ads.identifier does not exist import com.google.android.gms.ads.identifier.AdvertisingIdClient;
 >  >```
-
 //  @ build.gradle(:app) 편집 dependencies 영역에 implementation 'com.google.android.gms:play-services-ads:15.0.0' 추가
-
 dependencies {
     '
     '
     '   
     implementation 'com.google.android.gms:play-services-ads:15.0.1'
-    implementation 'commons-codec:commons-codec:1.11'
     '
     '
     '
 }
-
 >  >```
+>
 
 
 ## PHPStorm Setting
