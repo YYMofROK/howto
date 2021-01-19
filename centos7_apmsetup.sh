@@ -126,8 +126,16 @@ mysql_secure_installation
 # 저는 31 라인 입니다만 각자 다 다르겠죠?
 # <FilesMatch \.php$>
 # #    SetHandler application/x-httpd-php
+# #    SetHandler "proxy:unix:/var/run/php-fpm/php-fpm.sock" # 소켓 연결을 할 경우
 #     SetHandler "proxy:fcgi://127.0.0.1:9000" 
+
 # </FilesMatch>
+
+# [root@localhost ~]# vim /etc/php-fpm.d/www.conf
+#  #listen = /var/run/php-fpm/php-fpm.sock # 소켓으로 연동할 경우
+#  listen = 127.0.0.1:9000
+
+
 
 # 서비스 재시작
 # [root@localhost ~]# systemctl start php-fpm 
