@@ -122,7 +122,6 @@ $ composer global require hirak/prestissimo
 > Composer로 CI4 설치
 >
 ```
--/home/test/manage/ : 임의 설치 경로
 $ composer create-project codeigniter4/appstarter [ 설치할 경로 ]
 ```
 >-----------------------------------------------------------------------
@@ -152,9 +151,9 @@ $ reboot
 $ vi  /etc/httpd/conf.d/vhost.conf
 
 <VirtualHost *:80>
-    ServerName   admtest.co.kr
-    DocumentRoot /home/test/manage/public/
-       <Directory "/home/test/manage/public">
+    ServerName   test.test.test
+    DocumentRoot [CI4 설치경로 내부]/public
+       <Directory "[CI4 설치경로 내부]/public">
                Options Indexes FollowSymLinks
                AllowOverride All
                Require all granted
