@@ -4,13 +4,14 @@
 >
 > CentOS7에 Composer로 CodeIgniter4 설치
 >
+>-----------------------------------------------------------------------
 > SSH 모듈 설치
 ```
 $ yum install -y openssh-server
 $ yum install -y openssh-clients
 $ yum install -y vopenssh-askpass
 ```
->
+>-----------------------------------------------------------------------
 > CentOS7 기존 설치 패키지 최신화 및 개발도구 , 네트워크 도구 설치
 >
 ```
@@ -21,7 +22,7 @@ $ yum install -y bind-utils
 $ yum install -y rsync
 $ yum install -y wget
 ```
->
+>-----------------------------------------------------------------------
 > httpd( Apache ) 설치
 >
 ```
@@ -29,7 +30,7 @@ $ yum install -y httpd
 $ systemctl enable httpd
 $ systemctl start httpd
 ```
->
+>-----------------------------------------------------------------------
 > PHP7.2.x 
 >
 ```
@@ -83,7 +84,7 @@ $ yum install -y php-pecl-imagick-devel.x86_64
 $ yum install -y php-xmlrpc.x86_64
 $ systemctl restart httpd
 ```
->
+>-----------------------------------------------------------------------
 > Composer 설치
 >
 ```
@@ -121,14 +122,14 @@ $ composer clear-cache
 $ composer global require hirak/prestissimo
 
 ```
->
+>-----------------------------------------------------------------------
 > Composer로 CI4 설치
 >
 ```
 -/home/test/manage/ : 임의 설치 경로
 $ composer create-project codeigniter4/appstarter [ 설치할 경로 ]
 ```
->
+>-----------------------------------------------------------------------
 > selinux->config 파일 수정
 >
 ```
@@ -148,7 +149,7 @@ SELINUXTYPE=targeted
 
 $ reboot
 ```
->
+>-----------------------------------------------------------------------
 > Apache VirtualHost 설정
 >
 ```
@@ -166,6 +167,5 @@ $ vi  /etc/httpd/conf.d/vhost.conf
 
 $ systemctl restart httpd
 ```
-
 
 >-----------------------------------------------------------------------
