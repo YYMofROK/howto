@@ -1,15 +1,30 @@
-##### CentOS7에 Composer로 CodeIgniter4 설치 #####
 
-yum install -y openssh-server
-yum install -y openssh-clients
-yum install -y vopenssh-askpass
+### HTTP REQEUST CHECK
+>
+>  > CentOS7에 Composer로 CodeIgniter4 설치 #####
+>
+>  > SSH 모듈 설치
+```
+$ yum install -y openssh-server
+$ yum install -y openssh-clients
+$ yum install -y vopenssh-askpass
+```
 
+```
 yum update -y
 yum group install -y "Development Tools"
 yum install -y net-tools
 yum install -y bind-utils
 yum install -y rsync
 yum install -y wget
+
+
+```
+
+
+
+>
+-----------------------------------------------
 
 /************************
  * httpd 설치
