@@ -122,7 +122,7 @@ mysql_secure_installation
 
 #-----------------------------------------------------------------------
 # [root@localhost ~]# yum install php-fpm
-# [root@localhost ~]# vim /etc/httpd/conf.d/php.conf
+# [root@localhost ~]# vi /etc/httpd/conf.d/php.conf
 # 저는 31 라인 입니다만 각자 다 다르겠죠?
 # <FilesMatch \.php$>
 # #    SetHandler application/x-httpd-php
@@ -131,7 +131,7 @@ mysql_secure_installation
 
 # </FilesMatch>
 
-# [root@localhost ~]# vim /etc/php-fpm.d/www.conf
+# [root@localhost ~]# vi /etc/php-fpm.d/www.conf
 #  #listen = /var/run/php-fpm/php-fpm.sock # 소켓으로 연동할 경우
 #  listen = 127.0.0.1:9000
 
