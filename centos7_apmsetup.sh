@@ -124,16 +124,16 @@ mysql_secure_installation
 # [root@localhost ~]# yum install php-fpm
 # [root@localhost ~]# vi /etc/httpd/conf.d/php.conf
 # 저는 31 라인 입니다만 각자 다 다르겠죠?
-# <FilesMatch \.php$>
-# #    SetHandler application/x-httpd-php
-# #    SetHandler "proxy:unix:/var/run/php-fpm/php-fpm.sock" # 소켓 연결을 할 경우
-#     SetHandler "proxy:fcgi://127.0.0.1:9000" 
+<FilesMatch \.php$>
+#    SetHandler application/x-httpd-php
+#    SetHandler "proxy:unix:/var/run/php-fpm/php-fpm.sock" # 소켓 연결을 할 경우
+     SetHandler "proxy:fcgi://127.0.0.1:9000" 
 
-# </FilesMatch>
-
+</FilesMatch>
 # [root@localhost ~]# vi /etc/php-fpm.d/www.conf
-#  #listen = /var/run/php-fpm/php-fpm.sock # 소켓으로 연동할 경우
-#  listen = 127.0.0.1:9000
+
+#listen = /var/run/php-fpm/php-fpm.sock # 소켓으로 연동할 경우
+listen = 127.0.0.1:9000
 
 
 
