@@ -1,5 +1,10 @@
 # How To
 
+## [centos7]
+>  - [ open ssl 무료 인증서 설정방법 https://letsencrypt.org/ko/getting-started/ ](./Lets_Encrypt_https.md)
+>  >  > https://letsencrypt.org/ko/getting-started/
+>  >  > 90 일 단위 갱신 진행시 지속적으로 무료 사용 가능
+>
 
 ## [centos7]Codeignitor 4.x
 >  - [How to Codeignitor 4.x install](./centos7_ci4_install.md)
