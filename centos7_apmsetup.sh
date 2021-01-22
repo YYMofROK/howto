@@ -12,7 +12,7 @@ yum install -y net-tools
 yum install -y bind-utils
 yum install -y rsync
 yum install -y wget
-yum install -ㅛ cronolog
+yum install -y cronolog
 #-------------------------------------------------
 #centos 7 apache install - use rpm ( yum )
 yum install -y httpd
