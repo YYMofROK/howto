@@ -18,6 +18,7 @@ yum install -y cronolog
 yum install -y httpd
 
 # openssl 설정에 필요 부분
+yum install -y openssl
 yum install -y mod_ssl
 
 systemctl enable httpd
