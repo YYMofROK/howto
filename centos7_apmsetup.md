@@ -187,54 +187,50 @@
 >  >```
 > ---------------------------------------------------------------------------------------------
 
-## yum 을 이용하여 VSFTPD 설치
+## php-fpm 설치
 > ---------------------------------------------------------------------------------------------
 >  >
->  > FTP Service 설치
+>  > php-fpm
 >  >```
->  >   shell> yum install -y vsftpd
->  >   shell> systemctl enable vsftpd
->  >   shell> vi /etc/vsftpd/vsftpd.conf ( <= config file location )
+>  >   shell> yum install -y php-fpm
+>  >   shell> vi /etc/httpd/conf.d/php.conf
+>  >   # 저는 31 라인 입니다만 각자 다 다르겠죠?
+>  >   <FilesMatch \.php$>
+>  >   #    SetHandler application/x-httpd-php
+>  >   #    SetHandler "proxy:unix:/var/run/php-fpm/php-fpm.sock" # 소켓 연결을 할 경우
+>  >        SetHandler "proxy:fcgi://127.0.0.1:9000" 
+>  >   </FilesMatch>
+>  >   shell> vi /etc/php-fpm.d/www.conf
+>  >   #listen = /var/run/php-fpm/php-fpm.sock # 소켓으로 연동할 경우
+>  >   listen = 127.0.0.1:9000
+>  >   shell> systemctl start php-fpm 
+>  >   shell> systemctl enable php-fpm
+>  >   shell> systemctl restart httpd
 >  >```
+
+> ---------------------------------------------------------------------------------------------
+
+## firewall 설정
+> ---------------------------------------------------------------------------------------------
+>  >
+>  > php-fpm
+>  >```
+
+firewall port open
+firewall-cmd --zone=public --add-port=20/tcp --permanent
+firewall-cmd --zone=public --add-port=21/tcp --permanent
+firewall-cmd --zone=public --add-port=80/tcp --permanent
+firewall-cmd --zone=public --add-port=443/tcp --permanent
+firewall-cmd --zone=public --add-port=3306/tcp --permanent
+firewall-cmd --reload
+>  >```
+
 > ---------------------------------------------------------------------------------------------
 
 
-#-----------------------------------------------------------------------
-# [root@localhost ~]# yum install php-fpm
-# [root@localhost ~]# vi /etc/httpd/conf.d/php.conf
-# 저는 31 라인 입니다만 각자 다 다르겠죠?
-<FilesMatch \.php$>
-#    SetHandler application/x-httpd-php
-#    SetHandler "proxy:unix:/var/run/php-fpm/php-fpm.sock" # 소켓 연결을 할 경우
-     SetHandler "proxy:fcgi://127.0.0.1:9000" 
-
-</FilesMatch>
-# [root@localhost ~]# vi /etc/php-fpm.d/www.conf
-
-#listen = /var/run/php-fpm/php-fpm.sock # 소켓으로 연동할 경우
-listen = 127.0.0.1:9000
-
-
-
-# 서비스 재시작
-# [root@localhost ~]# systemctl start php-fpm 
-# [root@localhost ~]# systemctl enable php-fpm 
-# [root@localhost ~]# systemctl restart httpd 
-# - 
-#-----------------------------------------------------------------------
 
 
 
 
 
-
-
-
-#firewall port open
-#firewall-cmd --zone=public --add-port=20/tcp --permanent
-#firewall-cmd --zone=public --add-port=21/tcp --permanent
-#firewall-cmd --zone=public --add-port=80/tcp --permanent
-#firewall-cmd --zone=public --add-port=443/tcp --permanent
-#firewall-cmd --zone=public --add-port=3306/tcp --permanent
-#firewall-cmd --reload
 
