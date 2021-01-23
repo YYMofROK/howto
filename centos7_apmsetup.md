@@ -1,3 +1,86 @@
+
+## install sshd
+> ---------------------------------------------------------------------------------------------
+>  >
+>  >```
+>  >   shell> yum install -y openssh-server
+>  >   shell> yum install -y openssh-client
+>  >   shell> yum install -y openssh-askpass
+>  >   shell> vi /etc/ssh/sshd_config
+>  >   .
+>  >   .
+>  > # If you want to change the port on a SELinux system, you have to tell
+>  > # SELinux about this change.
+>  > # semanage port -a -t ssh_port_t -p tcp #PORTNUMBER
+>  > #Port 22 # <- 주석을 해제 한다.
+>  > #AddressFamily any
+>  > #ListenAddress 0.0.0.0
+>  > #ListenAddress ::
+>  >   .
+>  >   .
+>  >```
+> ---------------------------------------------------------------------------------------------
+
+## selinux 해제
+> ---------------------------------------------------------------------------------------------
+>  >
+>  >```
+>  >   # 개발 및 테스트 목적으로 실 서비스 운영시 비활성화는 권장하지 않습니다.
+>  >   
+>  >   shell> vi /etc/selinux/config
+>  >   
+>  > # This file controls the state of SELinux on the system.
+>  > # SELINUX= can take one of these three values:
+>  > #     enforcing - SELinux security policy is enforced.
+>  > #     permissive - SELinux prints warnings instead of enforcing.
+>  > #     disabled - No SELinux policy is loaded.
+>  > #SELINUX=enforcing
+>  > SELINUM=disabled
+>  > # SELINUXTYPE= can take one of three values:
+>  > #     targeted - Targeted processes are protected,
+>  > #     minimum - Modification of targeted policy. Only selected processes are protected.
+>  > #     mls - Multi Level Security protection.
+>  > SELINUXTYPE=targeted
+>  > 
+>  >   shell> reboot
+>  >```
+> ---------------------------------------------------------------------------------------------
+
+## 방화벽 해제
+> ---------------------------------------------------------------------------------------------
+>  >
+>  >```
+>  >   # 개발 및 테스트 목적으로 실 서비스 운영시 차단은 권장하지 않습니다.
+>  >   
+>  >   shell> iptables -F
+>  >   
+>  >```
+> ---------------------------------------------------------------------------------------------
+
+## yum 을 이용하여 기존 설치된 패키지의 Update 및 필요한 패키지 설치
+> ---------------------------------------------------------------------------------------------
+>  >
+>  >```
+>  >   shell> yum update -y
+>  >   shell> yum group install -y "Development Tools"
+>  >   shell> yum install -y net-tools
+>  >   shell> yum install -y bind-utils
+>  >   shell> yum install -y rsync
+>  >   shell> yum install -y wget
+>  >   shell> yum install -y cronolog
+>  >```
+> ---------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
 #-----------------------------------------------------------
 yum install -y openssh-server
 yum install -y openssh-clients
