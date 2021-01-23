@@ -9,13 +9,13 @@
 >  >   shell> vi /etc/ssh/sshd_config
 >  >   .
 >  >   .
->  > # If you want to change the port on a SELinux system, you have to tell
->  > # SELinux about this change.
->  > # semanage port -a -t ssh_port_t -p tcp #PORTNUMBER
->  > #Port 22 # <- 주석을 해제 한다.
->  > #AddressFamily any
->  > #ListenAddress 0.0.0.0
->  > #ListenAddress ::
+>  >   # If you want to change the port on a SELinux system, you have to tell
+>  >   # SELinux about this change.
+>  >   # semanage port -a -t ssh_port_t -p tcp #PORTNUMBER
+>  >   #Port 22 # <- 주석을 해제 한다.
+>  >   #AddressFamily any
+>  >   #ListenAddress 0.0.0.0
+>  >   #ListenAddress ::
 >  >   .
 >  >   .
 >  >```
@@ -29,18 +29,18 @@
 >  >   
 >  >   shell> vi /etc/selinux/config
 >  >   
->  > # This file controls the state of SELinux on the system.
->  > # SELINUX= can take one of these three values:
->  > #     enforcing - SELinux security policy is enforced.
->  > #     permissive - SELinux prints warnings instead of enforcing.
->  > #     disabled - No SELinux policy is loaded.
->  > #SELINUX=enforcing
->  > SELINUM=disabled
->  > # SELINUXTYPE= can take one of three values:
->  > #     targeted - Targeted processes are protected,
->  > #     minimum - Modification of targeted policy. Only selected processes are protected.
->  > #     mls - Multi Level Security protection.
->  > SELINUXTYPE=targeted
+>  >   # This file controls the state of SELinux on the system.
+>  >   # SELINUX= can take one of these three values:
+>  >   #     enforcing - SELinux security policy is enforced.
+>  >   #     permissive - SELinux prints warnings instead of enforcing.
+>  >   #     disabled - No SELinux policy is loaded.
+>  >   #SELINUX=enforcing
+>  >   SELINUM=disabled
+>  >   # SELINUXTYPE= can take one of three values:
+>  >   #     targeted - Targeted processes are protected,
+>  >   #     minimum - Modification of targeted policy. Only selected processes are protected.
+>  >   #     mls - Multi Level Security protection.
+>  >   SELINUXTYPE=targeted
 >  > 
 >  >   shell> reboot
 >  >```
@@ -150,14 +150,14 @@
 >  >```
 >  >   shell> sudo vi /etc/yum.repos.d/MariaDB.repo
 >  >   
->  >   ;http://downloads.mariadb.org/mariadb/repositories/
+>  >   #http://downloads.mariadb.org/mariadb/repositories/
 >  >   [mariadb]
 >  >   name = MariaDB
 >  >   baseurl = http://yum.mariadb.org/10.3/centos7-amd64
 >  >   gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 >  >   gpgcheck=1
->  >   ;Maria DB 설치
->  >   ;repository 설정을 했으면 아래 명령으로 YUM을 통해서 Maria DB를 설치할 수 있다.
+>  >   #Maria DB 설치
+>  >   #repository 설정을 했으면 아래 명령으로 YUM을 통해서 Maria DB를 설치할 수 있다.
 >  >
 >  >   shell> yum install MariaDB-server MariaDB-client
 >  >   shell> systemctl enable mariadb
@@ -167,12 +167,12 @@
 >  >
 >  > MySQL(Maria DB) root 계정 외부접속 허용설정하기
 >  >```
->  > 1. MySQL(Maria DB) 로 접속 한다.
->  > 2. use mysql 명령어를 입력한다.
->  > 3. grant all privileges on *.* to 'root'@'%' identified by '비밀번호'; 입력한다.
->  > 4. flush privileges; 입력한다.
->  > 5. my.cnf 파일 내용중에서 bind-address =127.0.0.1 을 주석(#)처리 하고 저장한다.
->  >     bind-address = 127.0.0.1 => #bind-address = 127.0.0.1
+>  >   # 1. MySQL(Maria DB) 로 접속 한다.
+>  >   # 2. use mysql 명령어를 입력한다.
+>  >   # 3. grant all privileges on *.* to 'root'@'%' identified by '비밀번호'; 입력한다.
+>  >   # 4. flush privileges; 입력한다.
+>  >   # 5. my.cnf 파일 내용중에서 bind-address =127.0.0.1 을 주석(#)처리 하고 저장한다.
+>  >        bind-address = 127.0.0.1 => #bind-address = 127.0.0.1
 >  >```
 
 
