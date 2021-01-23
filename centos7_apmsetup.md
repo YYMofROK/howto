@@ -71,41 +71,22 @@
 >  >```
 > ---------------------------------------------------------------------------------------------
 
+## yum 을 이용하여 Apache ( httpd ) 설치
+> ---------------------------------------------------------------------------------------------
+>  >
+>  >```
+>  >   shell> yum install -y httpd
+>  >   shell> yum install -y openssl
+>  >   shell> yum install -y mod_ssl
+>  >
+>  >   shell> systemctl enable httpd
+>  >   shell> systemctl start httpd
+>  >```
+> ---------------------------------------------------------------------------------------------
 
 
 
 
-
-
-
-
-
-
-#-----------------------------------------------------------
-yum install -y openssh-server
-yum install -y openssh-clients
-yum install -y vopenssh-askpass
-# vi /etc/ssh/sshd_config 
-# Port 22 부분 주석 해제
-
-#-----------------------------------------------------------
-yum update -y
-yum group install -y "Development Tools"
-yum install -y net-tools
-yum install -y bind-utils
-yum install -y rsync
-yum install -y wget
-yum install -y cronolog
-#-------------------------------------------------
-#centos 7 apache install - use rpm ( yum )
-yum install -y httpd
-
-# openssl 설정에 필요 부분
-yum install -y openssl
-yum install -y mod_ssl
-
-systemctl enable httpd
-systemctl start httpd
 #-------------------------------------------------
 #PHP7 install - use rpm ( yum )
 wget -P /root https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
