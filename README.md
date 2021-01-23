@@ -2,21 +2,7 @@
 
 
 
-## [centos7] docker
->  - [ How to docker ](./docker.md)
->  >  > docker 설치 및 간단한 
->
 
-## [centos7] open ssl 무료 인증서
->  - [ open ssl 무료 인증서 설정방법 https://letsencrypt.org/ko/getting-started/ ](./Lets_Encrypt_https.md)
->  >  > https://letsencrypt.org/ko/getting-started/
->  >  > 90 일 단위 갱신 진행시 지속적으로 무료 사용 가능
->
-
-## [centos7]Codeignitor 4.x
->  - [How to Codeignitor 4.x install](./centos7_ci4_install.md)
->  >  > 라라벨 설치
->
 
 ## Android ( 안드로이드 )
 >
@@ -166,19 +152,25 @@ dependencies {
 >  >
 >  >```
 >
->  - [How to batch backup](./backupscript.md)
+>  - [How to batch backup](./centos7_backupscript.md)
 >  >  > 일괄백업 - 스케줄러( cron ) 연동할 경우 일괄 자동 백업 가능
 >
->  - [How to connect ssh]
->  >  > shell 에서 ssh 원격 접속 샘플 - 조금응용하면 스크립트화 가능
->  >```
->  >   shell> yum install sshpass
->  >
->  >   shell> sshpass -p'[password]' ssh [user]@[ip address] -p[port] -oStrictHostKeyChecking=yes
->  >
->  >```
+
+## [centos7] docker
+>  - [ How to docker ](./docker.md)
+>  >  > docker 설치 및 간단한 
 >
 
+## [centos7] open ssl 무료 인증서
+>  - [ open ssl 무료 인증서 설정방법 https://letsencrypt.org/ko/getting-started/ ](./Lets_Encrypt_https.md)
+>  >  > https://letsencrypt.org/ko/getting-started/
+>  >  > 90 일 단위 갱신 진행시 지속적으로 무료 사용 가능
+>
+
+## [centos7]Codeignitor 4.x
+>  - [How to Codeignitor 4.x install](./centos7_ci4_install.md)
+>  >  > 라라벨 설치
+>
 
 ## [centos7]nodejs
 >  - [How to nodejs install_use_nvm](./centos7_nodejs_install_use_nvm.md)
