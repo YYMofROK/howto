@@ -215,14 +215,15 @@
 >  >
 >  > php-fpm
 >  >```
-
-firewall port open
-firewall-cmd --zone=public --add-port=20/tcp --permanent
-firewall-cmd --zone=public --add-port=21/tcp --permanent
-firewall-cmd --zone=public --add-port=80/tcp --permanent
-firewall-cmd --zone=public --add-port=443/tcp --permanent
-firewall-cmd --zone=public --add-port=3306/tcp --permanent
-firewall-cmd --reload
+>  >   shell> 
+>  >   shell> firewall port open
+>  >   shell> firewall-cmd --zone=public --add-port=20/tcp --permanent
+>  >   shell> firewall-cmd --zone=public --add-port=21/tcp --permanent
+>  >   shell> firewall-cmd --zone=public --add-port=80/tcp --permanent
+>  >   shell> firewall-cmd --zone=public --add-port=443/tcp --permanent
+>  >   shell> firewall-cmd --zone=public --add-port=3306/tcp --permanent
+>  >   shell> firewall-cmd --reload
+>  >   shell> 
 >  >```
 
 > ---------------------------------------------------------------------------------------------
