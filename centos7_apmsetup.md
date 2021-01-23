@@ -159,7 +159,23 @@
 >  >   ;Maria DB 설치
 >  >   ;repository 설정을 했으면 아래 명령으로 YUM을 통해서 Maria DB를 설치할 수 있다.
 >  >
+>  >   shell> yum install MariaDB-server MariaDB-client
+>  >   shell> systemctl enable mariadb
+>  >   shell> systemctl start mariadb
+>  >   shell> mysql_secure_installation
 >  >```
+>  >
+>  > MySQL(Maria DB) root 계정 외부접속 허용설정하기
+>  >```
+>  > 1. MySQL(Maria DB) 로 접속 한다.
+>  > 2. use mysql 명령어를 입력한다.
+>  > 3. grant all privileges on *.* to 'root'@'%' identified by '비밀번호'; 입력한다.
+>  > 4. flush privileges; 입력한다.
+>  > 5. my.cnf 파일 내용중에서 bind-address =127.0.0.1 을 주석(#)처리 하고 저장한다.
+>  >     bind-address = 127.0.0.1 => #bind-address = 127.0.0.1
+>  >```
+
+
 > ---------------------------------------------------------------------------------------------
 
 
@@ -172,40 +188,6 @@
 
 
 
-
-
-#-----------------------------------------------------------
-# sudo vi /etc/yum.repos.d/MariaDB.repo
-# MariaDB 10.3 CentOS repository list - created 2019-01-13 00:47 UTC
-# http://downloads.mariadb.org/mariadb/repositories/
-[mariadb]
-name = MariaDB
-baseurl = http://yum.mariadb.org/10.3/centos7-amd64
-gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
-gpgcheck=1
-# Maria DB 설치
-# repository 설정을 했으면 아래 명령으로 YUM을 통해서 Maria DB를 설치할 수 있다.
-
-yum install MariaDB-server MariaDB-client
-
-#MariaDB first config
-systemctl enable mariadb
-systemctl start mariadb
-mysql_secure_installation
-
-
-
-#-----------------------------------------------------------------------
-#
-# MySQL(Maria DB) root 계정 외부접속 허용설정하기
-#
-# 1. MySQL(Maria DB) 로 접속 한다.
-# 2. use mysql 명령어를 입력한다.
-# 3. grant all privileges on *.* to 'root'@'%' identified by '비밀번호'; 입력한다.
-# 4. flush privileges; 입력한다.
-# 5. my.cnf 파일 내용중에서 bind-address =127.0.0.1 을 주석(#)처리 하고 저장한다.
-#     bind-address = 127.0.0.1 => #bind-address = 127.0.0.1
-#-----------------------------------------------------------------------
 
 
 
