@@ -217,8 +217,8 @@ dependencies {
 >
 
 ## [centos7]Apache PHP MariaDB install
->  - [How to APM install on Centos7](./centos7_apmsetup.sh)
->  >  > 아파치 PHP 마리아DB 설치 스크립트 정리
+>  - [How to APM install on Centos7](./centos7_apmsetup.md)
+>  >  > 아파치 PHP 마리아DB 설치
 >
 
 ## [centos7]File System ( Centos7 )
