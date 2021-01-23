@@ -174,42 +174,30 @@
 >  >   # 5. my.cnf 파일 내용중에서 bind-address =127.0.0.1 을 주석(#)처리 하고 저장한다.
 >  >        bind-address = 127.0.0.1 => #bind-address = 127.0.0.1
 >  >```
-
-
 > ---------------------------------------------------------------------------------------------
 
+## yum 을 이용하여 VSFTPD 설치
+> ---------------------------------------------------------------------------------------------
+>  >
+>  > FTP Service 설치
+>  >```
+>  >   shell> yum install -y vsftpd
+>  >   shell> systemctl enable vsftpd
+>  >   shell> vi /etc/vsftpd/vsftpd.conf ( <= config file location )
+>  >```
+> ---------------------------------------------------------------------------------------------
 
+## yum 을 이용하여 VSFTPD 설치
+> ---------------------------------------------------------------------------------------------
+>  >
+>  > FTP Service 설치
+>  >```
+>  >   shell> yum install -y vsftpd
+>  >   shell> systemctl enable vsftpd
+>  >   shell> vi /etc/vsftpd/vsftpd.conf ( <= config file location )
+>  >```
+> ---------------------------------------------------------------------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#-----------------------------------------------------------
-#centos 7 vsftpd install - use rpm ( yum )
-
-yum install -y vsftpd
-systemctl enable vsftpd
-#view /etc/vsftpd/vsftpd.conf ( <= config file location )
-#-----------------------------------------------------------------------
-
-
-#firewall port open
-#firewall-cmd --zone=public --add-port=20/tcp --permanent
-#firewall-cmd --zone=public --add-port=21/tcp --permanent
-#firewall-cmd --zone=public --add-port=80/tcp --permanent
-#firewall-cmd --zone=public --add-port=443/tcp --permanent
-#firewall-cmd --zone=public --add-port=3306/tcp --permanent
-#firewall-cmd --reload
 
 #-----------------------------------------------------------------------
 # [root@localhost ~]# yum install php-fpm
@@ -234,3 +222,19 @@ listen = 127.0.0.1:9000
 # [root@localhost ~]# systemctl restart httpd 
 # - 
 #-----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+#firewall port open
+#firewall-cmd --zone=public --add-port=20/tcp --permanent
+#firewall-cmd --zone=public --add-port=21/tcp --permanent
+#firewall-cmd --zone=public --add-port=80/tcp --permanent
+#firewall-cmd --zone=public --add-port=443/tcp --permanent
+#firewall-cmd --zone=public --add-port=3306/tcp --permanent
+#firewall-cmd --reload
+
