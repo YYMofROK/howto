@@ -21,7 +21,6 @@
 ## Android ( 안드로이드 )
 >
 >  - [Webview] history back 실행시 재생중인 오디오 중지하기
->  >
 >  >  > JAVA
 >  >```
 >  >  @Override
@@ -39,7 +38,7 @@
 >  >```
 >  >
 >  - [Webview] history back 실행시 전체화면 상태 설정 유지 - Webview Activity 에 함수 추가
->  >
+>  >  > JAVA
 >  >```
 >  >@Override
 >  >public void onWindowFocusChanged(boolean hasFocus) {
