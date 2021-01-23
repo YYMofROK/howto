@@ -1,5 +1,5 @@
 
-## install sshd
+## sshd install
 > ---------------------------------------------------------------------------------------------
 >  >
 >  >```
@@ -84,63 +84,77 @@
 >  >```
 > ---------------------------------------------------------------------------------------------
 
+## yum 을 이용하여 PHP7.2 설치
+> ---------------------------------------------------------------------------------------------
+>  >
+>  >```
+>  >
+>  >   shell> wget -P /root https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+>  >   shell> rpm -Uvh /root/epel-release-latest-7.noarch.rpm
+>  >   shell> wget -P /root http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+>  >   shell> rpm -Uvh /root/remi-release-7.rpm
+>  >   shell> yum install -y yum-utils
+>  >   shell> yum-config-manager --enable remi-php72
+>  >
+>  >   shell> yum install -y php
+>  >   shell> yum install -y php-common
+>  >   shell> yum install -y php-fpm
+>  >   shell> yum install -y php-process
+>  >   shell> yum install -y php-opcache
+>  >   shell> yum install -y php-pecl-apcu
+>  >   shell> yum install -y php-mysqlnd
+>  >   shell> yum install -y php-pdo
+>  >   shell> yum install -y php-gd
+>  >   shell> yum install -y php-mbstring
+>  >   shell> yum install -y php-xml
+>  >   shell> yum install -y php-pecl-zip
+>  >   shell> yum install -y php-bcmath
+>  >   shell> yum install -y php-pgsql
+>  >   shell> yum install -y php-odbc
+>  >   shell> yum install -y php-pdo.x86_64
+>  >   shell> yum install -y php-pdo-dblib.x86_64
+>  >   shell> yum install -y php-pecl-imagick.x86_64
+>  >   shell> yum install -y php-pecl-imagick-devel.x86_64
+>  >   shell> yum install -y php-xmlrpc.x86_64
+>  >   shell> yum install -y php-redis
+>  >   shell> yum install -y php-pecl-redis4
+>  >   shell> yum install -y php-brotli
+>  >   shell> yum install -y php-gmp
+>  >   shell> yum install -y php-imap
+>  >   shell> yum install -y php-interbase
+>  >   shell> yum install -y php-json
+>  >   shell> yum install -y php-memcached 
+>  >   shell> yum install -y php-tidy
+>  >   shell> yum install -y php-pear 
+>  >   shell> yum install -y php-pecl-geoip
+>  >   shell> yum install -y php-pecl-gmagick
+>  >   shell> yum install -y php-pecl-hrtime
+>  >   shell> yum install -y php-pecl-json
+>  >   shell> yum install -y php-pecl-memcache
+>  >   shell> yum install -y php-pecl-mongodb
+>  >   shell> yum install -y php-pecl-rar
+>  >   shell> yum install -y php-pecl-pq 
+>  >   shell> yum install -y php-pecl-yaml 
+>  >   shell> yum install -y php-intl
+>  >   
+>  >   ; yum install -y php-cli # 위 라이브러리 설치후 필요할 경우 추가
+>  >   shell> systemctl restart httpd
+>  >   
+>  >```
+> ---------------------------------------------------------------------------------------------
 
 
 
-#-------------------------------------------------
-#PHP7 install - use rpm ( yum )
-wget -P /root https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-rpm -Uvh /root/epel-release-latest-7.noarch.rpm
-wget -P /root http://rpms.remirepo.net/enterprise/remi-release-7.rpm
-rpm -Uvh /root/remi-release-7.rpm
-yum install -y yum-utils
-yum-config-manager --enable remi-php72
-
-yum install -y php
-yum install -y php-common
-yum install -y php-fpm
-yum install -y php-process
-yum install -y php-opcache
-yum install -y php-pecl-apcu
-yum install -y php-mysqlnd
-yum install -y php-pdo
-yum install -y php-gd
-yum install -y php-mbstring
-yum install -y php-xml
-yum install -y php-pecl-zip
-yum install -y php-bcmath
-yum install -y php-pgsql
-yum install -y php-odbc
-yum install -y php-pdo.x86_64
-yum install -y php-pdo-dblib.x86_64
-yum install -y php-pecl-imagick.x86_64
-yum install -y php-pecl-imagick-devel.x86_64
-yum install -y php-xmlrpc.x86_64
-yum install -y php-redis
-yum install -y php-pecl-redis4
-yum install -y php-brotli
-yum install -y php-gmp
-yum install -y php-imap
-yum install -y php-interbase
-yum install -y php-json
-yum install -y php-memcached 
-yum install -y php-tidy
-yum install -y php-pear 
-yum install -y php-pecl-geoip
-yum install -y php-pecl-gmagick
-yum install -y php-pecl-hrtime
-yum install -y php-pecl-json
-yum install -y php-pecl-memcache
-yum install -y php-pecl-mongodb
-yum install -y php-pecl-rar
-yum install -y php-pecl-pq 
-yum install -y php-pecl-yaml 
-yum install -y php-intl
-
-# yum install -y php-cli # 위 라이브러리 설치후 필요할 경우 추가
 
 
-systemctl restart httpd
+
+
+
+
+
+
+
+
 #-----------------------------------------------------------
 #centos 7 vsftpd install - use rpm ( yum )
 
