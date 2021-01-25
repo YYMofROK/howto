@@ -23,3 +23,8 @@ $ dscacheutil -flushcache
 
 
 https://ninanung0503.medium.com/apple-silicon-m1-mac%EC%97%90-homebrew-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0-7b6c0d3aba08
+
+
+
+$ sudo apachectl start
+$ sudo apachectl stop
