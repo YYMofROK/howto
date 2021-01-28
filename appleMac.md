@@ -28,3 +28,37 @@ https://ninanung0503.medium.com/apple-silicon-m1-mac%EC%97%90-homebrew-%EC%84%A4
 
 $ sudo apachectl start
 $ sudo apachectl stop
+
+
+
+
+To stop Apache web server, enter:
+sudo apachectl stop
+
+OR
+sudo apachectl -k stop
+
+To start Apache web server again, enter:
+sudo apachectl start
+
+OR
+sudo apachectl -k start
+
+To restart apache web server, enter:
+sudo apachectl restart
+
+OR
+sudo apachectl -k restart
+
+To run a configuration file syntax test
+sudo apachectl configtest
+
+To reload apache web server after editing the config file
+First edit the config file, run:
+$ sudo vi /etc/apache2/httpd.conf
+
+Make changes as per your needs. Close and save the file. To reload new changes, run:
+sudo apachectl graceful
+
+OR
+sudo apachectl -k graceful
