@@ -59,10 +59,9 @@
 >  >   shell> rpm -Uvh /root/remi-release-7.rpm
 >  >   shell> yum install -y yum-utils
 >  >   shell> yum-config-manager --enable remi-php72
-
+>  >   
 >  >   # shell> yum-config-manager --enable remi-php74  <- 적용시 PHP7.4 설치
 >  >   # shell> yum-config-manager --enable remi-php80  <- 적용시 PHP8.0 설치
-
 >  >
 >  >   shell> yum install -y php
 >  >   shell> yum install -y php-common
