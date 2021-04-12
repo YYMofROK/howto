@@ -6,6 +6,37 @@
 
 ## Android ( 안드로이드 )
 >
+>  - [urlencode/urldecode] URL Encode / Decode 샘플
+>  >  > JAVA
+>  >```
+>  >  import java.io.UnsupportedEncodingException;
+>  >  import java.net.URLEncoder;
+>  >  import java.net.URLDecoder;
+>  >   
+>  >  public class URLEncodeTest {
+>  >      public static void main(String[] args) {
+>  >          String url = null;
+>  >          try {
+>  >              url = URLEncoder.encode("정상처리 되었습니다.", "UTF-8");
+>  >          } catch (UnsupportedEncodingException e1) {
+>  >              e1.printStackTrace();
+>  >          }
+>  >   
+>  >          System.out.println(url);
+>  >          
+>  >          url = null;
+>  >          try {
+>  >              url = URLDecoder.decode("%EC%A0%95%EC%83%81%EC%B2%98%EB%A6%AC+%EB%90%98%EC%97%88%EC%8A%B5%EB%8B%88%EB%8B%A4.", "UTF-8");
+>  >          } catch (UnsupportedEncodingException e1) {
+>  >              e1.printStackTrace();
+>  >          }
+>  >   
+>  >          System.out.println(url);        
+>  >          
+>  >      }
+>  >  }
+>  >```
+>  >
 >  - [Webview] history back 실행시 재생중인 오디오 중지하기
 >  >  > JAVA
 >  >```
