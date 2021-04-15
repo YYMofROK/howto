@@ -246,6 +246,10 @@
 >  >  > 아파치 PHP 마리아DB 설치
 >
 
+
+
+
+
 ## [centos7]File System ( Centos7 )
 >  - [Find - Search File](./search_file.md) 
 >  >  >파일 또는 디렉토리 찾기
@@ -318,9 +322,10 @@
 >  >   $ tail --help
 >  >```
 >
-
-
-
-
-
-
+>  - tree
+>  >  >디렉토리 구조 확인하기
+>  >```
+>  >   $ yum install tree
+>  >   $ tree -d -L 2
+>  >```
+>
