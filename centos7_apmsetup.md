@@ -95,8 +95,6 @@
 >  >   shell> yum install -y php-tidy
 >  >   shell> yum install -y php-pear 
 >  >   shell> yum install -y php-pecl-geoip
->  >   shell> yum install -y php-pecl-gmagick
->  >   shell> yum install -y php-pecl-hrtime
 >  >   shell> yum install -y php-pecl-json
 >  >   shell> yum install -y php-pecl-memcache
 >  >   shell> yum install -y php-pecl-mongodb
@@ -126,8 +124,9 @@
 >  >   gpgcheck=1
 >  >   #Maria DB 설치
 >  >   #repository 설정을 했으면 아래 명령으로 YUM을 통해서 Maria DB를 설치할 수 있다.
->  >
->  >   shell> yum install MariaDB-server MariaDB-client
+>  >   
+>  >   shell> yum install -y MariaDB-server
+>  >   shell> yum install -y MariaDB-client
 >  >   shell> systemctl enable mariadb
 >  >   shell> systemctl start mariadb
 >  >   shell> mysql_secure_installation
