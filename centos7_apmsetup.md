@@ -90,7 +90,6 @@
 >  >   shell> yum install -y php-brotli
 >  >   shell> yum install -y php-gmp
 >  >   shell> yum install -y php-imap
->  >   shell> yum install -y php-interbase
 >  >   shell> yum install -y php-json
 >  >   shell> yum install -y php-memcached 
 >  >   shell> yum install -y php-tidy
