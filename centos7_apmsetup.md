@@ -4,7 +4,7 @@
 >  >
 >  >```
 >  >   shell> yum install -y openssh-server
->  >   shell> yum install -y openssh-client
+>  >   shell> yum install -y openssh-clients
 >  >   shell> yum install -y openssh-askpass
 >  >   shell> vi /etc/ssh/sshd_config
 >  >   .
