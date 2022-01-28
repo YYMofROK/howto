@@ -208,6 +208,7 @@
 >  >   shell> firewall-cmd --zone=public --add-port=80/tcp --permanent
 >  >   shell> firewall-cmd --zone=public --add-port=443/tcp --permanent
 >  >   shell> firewall-cmd --zone=public --add-port=3306/tcp --permanent
+>  >   shell> firewall-cmd --zone=public --add-port=50001-50100/tcp --permanent
 >  >   shell> firewall-cmd --reload
 >  >   shell> 
 >  >```
