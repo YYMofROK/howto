@@ -155,12 +155,20 @@
 >  >   shell> systemctl enable vsftpd
 >  >   shell> vi /etc/vsftpd/vsftpd.conf ( <= config file location )
 >  >   
+>  >   # FTP 접속시 상위 디렉토리에 대한 설정
+>  >   chroot_local_user=YES
+>  >   allow_writeable_chroot=YES
+>  >   
 >  >   # 패시브모드 활성화
 >  >   pasv_enable=YES
 >  >   
 >  >   # 패시브모드에서 사용할 포트 범위 설정
 >  >   pasv_min_port=50000
 >  >   pasv_max_port=50001
+>  >   
+>  >   dual_log_enable=YES
+>  >   log_ftp_protocol=YES
+>  >   ftp_username=nobody
 >  >   
 >  >```
 > ---------------------------------------------------------------------------------------------
