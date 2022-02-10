@@ -42,6 +42,7 @@
 >  >   shell> yum install -y httpd
 >  >   shell> yum install -y openssl
 >  >   shell> yum install -y mod_ssl
+>  >   shell> yum install -y mod_security
 >  >
 >  >   shell> systemctl enable httpd
 >  >   shell> systemctl start httpd
