@@ -211,6 +211,15 @@
 >  >   shell> firewall-cmd --zone=public --add-port=50001-50100/tcp --permanent
 >  >   shell> firewall-cmd --reload
 >  >   shell> 
+>  >   shell> 
+>  >   shell> firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address=192.168.0.100 reject' #--> 피드백 보내줌
+>  >   shell> firewall-cmd --permanent --remove-rich-rule='rule family="ipv4" source address=192.168.0.100 reject '#--> 피드백 보내줌
+>  >   shell> 
+>  >   shell> 
+>  >   shell> firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address=192.168.0.100 drop'   #--> 피드백 없음
+>  >   shell> firewall-cmd --permanent --remove-rich-rule='rule family="ipv4" source address=192.168.0.100 drop'   #--> 피드백 없음
+>  >   shell> 
+>  >   shell> firewall-cmd --reload
 >  >```
 
 > ---------------------------------------------------------------------------------------------
