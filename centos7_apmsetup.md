@@ -262,5 +262,21 @@
 >  >```
 > ---------------------------------------------------------------------------------------------
 
+## [참고]Convert Certificate Format SSL 인증서 변환 가이드
+> ---------------------------------------------------------------------------------------------
+>  >
+>  >```
+>  >   # 출처 : https://www.sslcert.co.kr/guides/SSL-Certificate-Convert-Format
+>  >   
+>  >   # OpenSSL 이용한 .pfx 생성 / pem 추출 / PrivateKey 암호화 적용,해제
+>  >   
+>  >   # .pfx 에서 .crt 추출하기 (.pfx 암호 필요)
+>  >   shell> openssl pkcs12 -in sslcert.co.kr.pfx -clcerts -nokeys -out sslcert.co.kr.crt.pem
+>  >   
+>  >   # .pfx 에서 .key 추출하기 (.pfx 암호 필요)
+>  >   shell> openssl pkcs12 -in sslcert.co.kr.pfx -nocerts -nodes -out sslcert.co.kr.key.pem
+>  >```
+> ---------------------------------------------------------------------------------------------
+
 
 
