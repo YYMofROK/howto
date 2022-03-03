@@ -275,6 +275,24 @@
 >  >   
 >  >   # .pfx 에서 .key 추출하기 (.pfx 암호 필요)
 >  >   shell> openssl pkcs12 -in sslcert.co.kr.pfx -nocerts -nodes -out sslcert.co.kr.key.pem
+>  >   
+>  >   # .crt 및 .key 를 조합하여 .pfx 만들기
+>  >   shell> openssl pkcs12 -export -in sslcert.co.kr.crt -inkey private.key -out sslcert.co.kr.pfx
+>  >   
+>  >   # .pfx 에 포함된 인증서 확인 (.pfx 암호 필요)
+>  >   shell> openssl pkcs12 -info -in sslcert.co.kr.pfx
+>  >   
+>  >   # 개인키 파일에 암호화 적용 (패스워드 적용)
+>  >   shell> openssl.exe rsa -des3 -in sslcert.co.kr.key.pem -out _ENCRYPTED_.key.pem
+>  >   writing RSA key
+>  >   Enter PEM pass phrase: (개인키 PEM 암호화 적용 패스워드 입력)
+>  >   Verifying - Enter PEM pass phrase:
+>  >   
+>  >   # 암호화 해제된 개인키 파일 생성
+>  >   shell> openssl.exe rsa -in _ENCRYPTED_.key.pem -out sslcert.co.kr.key.pem
+>  >   Enter pass phrase for _ENCRYPTED_.key.pem: (개인키 PEM 패스워드 입력)
+>  >   writing RSA key
+>  >   
 >  >```
 > ---------------------------------------------------------------------------------------------
 
