@@ -184,6 +184,17 @@
 >  >   shell> sshpass -p'[password]' ssh [user]@[ip address] -p[port] -oStrictHostKeyChecking=yes
 >  >
 >  >```
+>  - [How to Get df results by email]
+>  >  > df( 저장공간확인 ) 결과 eMail 로 수신하기
+>  >```
+>  >
+>  >  #!/bin/bash
+>  >  df -h > /home/util/df_result.txt
+>  >  TO_EMAIL="app1@theboms.co.kr"
+>  >  SUBJECT="YYM_CI_DEV ( 118.67.134.239 )  HDD df result"
+>  >  /bin/mail -r "app1@theboms.co.kr" -s "$SUBJECT" "$TO_EMAIL" < /home/util/df_result.txt
+>  >  
+>  >```
 >
 >  - [How to batch backup](./centos7_backupscript.md)
 >  >  > 일괄백업 - 스케줄러( cron ) 연동할 경우 일괄 자동 백업 가능
