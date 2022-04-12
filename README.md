@@ -187,12 +187,17 @@
 >  - [How to Get df results by email]
 >  >  > df( 저장공간확인 ) 결과 eMail 로 수신하기
 >  >```
->  >
+>  >  shell> vi ./monitor_df.sh
+>  >  
 >  >  #!/bin/bash
 >  >  df -h > /home/util/df_result.txt
->  >  TO_EMAIL="app1@theboms.co.kr"
->  >  SUBJECT="YYM_CI_DEV ( 118.67.134.239 )  HDD df result"
->  >  /bin/mail -r "app1@theboms.co.kr" -s "$SUBJECT" "$TO_EMAIL" < /home/util/df_result.txt
+>  >  TO_EMAIL="test@test.com"
+>  >  SUBJECT="TEST SERVER  HDD df result"
+>  >  /bin/mail -r "test@test.com" -s "$SUBJECT" "$TO_EMAIL" < /home/util/df_result.txt
+>  >  
+>  >  shell> chmod 701 ./monitor_df.sh
+>  >  
+>  >  shell> ./monitor_df.sh
 >  >  
 >  >```
 >
