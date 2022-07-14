@@ -174,6 +174,21 @@
 >  >
 >  >```
 >
+>  - [How to 저장소 ID/PW 저장]
+>  >
+>  >```
+>  >   shell> git init
+>  >   shell> git remote add origin [ 저장소 URL ]
+>  >   shell> git config credential.helper store
+>  >   shell> git pull origin master
+>  >
+>  >```
+>
+  
+  
+
+
+
 
 ## [centos7]Shell Script
 >  - [How to connect ssh]
