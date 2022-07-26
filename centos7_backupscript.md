@@ -18,4 +18,6 @@ if [ ${HomeDirPath}"/$LINE" != ${BackDirPath} ]; then
 fi
 done
 
+
+mysqldump -u[DBUSER] -p[DBPASSWORD] [DBNAME] > ${BackDirPath}/"[DBNAME]_"${NowTime}.sql
 ```
