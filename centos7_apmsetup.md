@@ -53,6 +53,8 @@
 > ---------------------------------------------------------------------------------------------
 >  >
 >  >```
+>  >   shell> yum  install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+>  >   
 >  >   shell> wget -P /root http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 >  >   http://rpms.remirepo.net/enterprise/remi-release-7.rpm 파일 다운로드가 정상적으로 진행되지 않을경우
 >  >   http://rpms.remirepo.net 에서 직접 다운받아서 서버에 업로드 한후 진행하면 된다.
