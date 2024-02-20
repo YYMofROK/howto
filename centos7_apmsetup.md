@@ -141,11 +141,31 @@
 >  > MySQL(Maria DB) root 계정 외부접속 허용설정하기
 >  >```
 >  >   # 1. MySQL(Maria DB) 로 접속 한다.
+>  >
 >  >   # 2. use mysql 명령어를 입력한다.
+>  >
 >  >   # 3. grant all privileges on *.* to 'root'@'%' identified by '비밀번호'; 입력한다.
+>  >
 >  >   # 4. flush privileges; 입력한다.
+>  >
 >  >   # 5. my.cnf 파일 내용중에서 bind-address =127.0.0.1 을 주석(#)처리 하고 저장한다.
 >  >        bind-address = 127.0.0.1 => #bind-address = 127.0.0.1
+>  >
+>  >   # 6. 접근 권한 확인Permalink
+>  >        select Host,User,plugin,authentication_string FROM mysql.user;
+>  >
+>  >   # 7. 모든 IP 허용Permalink
+>  >        GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '패스워드';
+>  >
+>  >   # 8. IP 대역 허용Permalink
+>  >        GRANT ALL PRIVILEGES ON *.* TO 'root'@'192.168.0.%' IDENTIFIED BY '패스워드';
+>  >
+>  >   # 9. 특정 IP 허용Permalink
+>  >        GRANT ALL PRIVILEGES ON *.* TO 'root'@'192.168.0.19' IDENTIFIED BY '패스워드';
+>  >
+>  >   # 10. ️ 허용 전으로 되돌리기Permalink
+>  >        DELETE FROM mysql.user WHERE Host='%' AND User='유저명';
+>  >        FLUSH PRIVILEGES;
 >  >```
 > ---------------------------------------------------------------------------------------------
 
@@ -297,6 +317,5 @@
 >  >   
 >  >```
 > ---------------------------------------------------------------------------------------------
-
 
 
