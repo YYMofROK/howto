@@ -191,6 +191,14 @@
 
 
 ## [centos7]Shell Script
+
+
+>  - [How to find files opened by a process]
+>  >  > shell 에서 프로세스에 의하여 열려있는 파일 찾기
+>  >```
+>  >   shell> lsof -i :8190    # 8190 포트를 점유하고 있는 프로세스에 의하여 열려있는 파일
+>  >
+>  >```
 >  - [How to connect ssh]
 >  >  > shell 에서 ssh 원격 접속 샘플 - 조금응용하면 스크립트화 가능
 >  >```
