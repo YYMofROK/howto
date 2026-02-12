@@ -122,7 +122,6 @@
 >  >  sudo vi /etc/yum.repos.d/MariaDB.repo
 >  >   
 >  >  #http://downloads.mariadb.org/mariadb/repositories/
->  >  sudo vi /etc/yum.repos.d/MariaDB.repo
 >  >  [mariadb]
 >  >  name = MariaDB
 >  >  # Rocky Linux 9 및 ARM64(M1/M2 Mac) 아키텍처에 최적화된 경로입니다.
