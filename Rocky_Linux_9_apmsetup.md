@@ -136,6 +136,9 @@
 >  >  sudo dnf clean all
 >  >  sudo dnf install -y MariaDB-server MariaDB-client
 >  >
+>  >  #  최초 보안 설정
+>  >  mariadb-secure-installation
+>  >
 >  >```
 >  >
 >  > MySQL(Maria DB) root 계정 외부접속 허용설정하기
