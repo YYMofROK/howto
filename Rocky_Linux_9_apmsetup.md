@@ -130,16 +130,12 @@
 >  >  gpgcheck = 1
 >  >
 >  >
+>  >  # MariaDB 공식 레포지토리 설정 스크립트 실행
+>  >  curl -LsS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash -s -- --mariadb-server-version=11.4
+>  >  # 캐시 갱신 및 설치
+>  >  sudo dnf clean all
+>  >  sudo dnf install -y MariaDB-server MariaDB-client
 >  >
->  >
->  >   #Maria DB 설치
->  >   #repository 설정을 했으면 아래 명령으로 YUM을 통해서 Maria DB를 설치할 수 있다.
->  >   
->  >    yum install -y MariaDB-server
->  >    yum install -y MariaDB-client
->  >    systemctl enable mariadb
->  >    systemctl start mariadb
->  >    mysql_secure_installation
 >  >```
 >  >
 >  > MySQL(Maria DB) root 계정 외부접속 허용설정하기
