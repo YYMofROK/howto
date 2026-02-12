@@ -114,75 +114,6 @@
 >  >```
 > ---------------------------------------------------------------------------------------------
 
-## yum 을 이용하여 PHP7.2 설치
-> ---------------------------------------------------------------------------------------------
->  >
->  >```
->  >    yum  install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
->  >   
->  >    wget -P /root http://rpms.remirepo.net/enterprise/remi-release-7.rpm
->  >   http://rpms.remirepo.net/enterprise/remi-release-7.rpm 파일 다운로드가 정상적으로 진행되지 않을경우
->  >   http://rpms.remirepo.net 에서 직접 다운받아서 서버에 업로드 한후 진행하면 된다.
->  >   
->  >    rpm -Uvh /root/remi-release-7.rpm
->  >   
->  >    yum install -y yum-utils
->  >   #  yum-config-manager --enable remi-php72
->  >   #  yum-config-manager --enable remi-php74  <- 적용시 PHP7.4 설치
->  >   #  yum-config-manager --enable remi-php82  <- 적용시 PHP8.2.* 설치
->  >    
->  >   
->  >    yum install -y https://rpms.remirepo.net/enterprise/remi-release-7.rpm
->  >    yum-config-manager --disable 'remi-php*'
->  >    yum-config-manager --enable remi-php80
->  >    yum-config-manager --enable remi-php80  <- 적용시 PHP8.0 설치
->  >    yum-config-manager --enable remi-php82  <- 적용시 PHP8.0 설치
->  >
->  >    yum install -y php
->  >    yum install -y php-common
->  >    yum install -y php-fpm
->  >    yum install -y php-process
->  >    yum install -y php-opcache
->  >    yum install -y php-pecl-apcu
->  >    yum install -y php-mysqlnd
->  >    yum install -y php-pdo
->  >    yum install -y php-gd
->  >    yum install -y php-mbstring
->  >    yum install -y php-xml
->  >    yum install -y php-pecl-zip
->  >    yum install -y php-bcmath
->  >    yum install -y php-pgsql
->  >    yum install -y php-odbc
->  >    yum install -y php-pdo.x86_64
->  >    yum install -y php-pdo-dblib.x86_64
->  >    yum install -y php-pecl-imagick.x86_64
->  >    yum install -y php-pecl-imagick-devel.x86_64
->  >    yum install -y php-xmlrpc.x86_64
->  >    yum install -y php-redis
->  >    yum install -y php-pecl-redis4
->  >    yum install -y php-brotli
->  >    yum install -y php-gmp
->  >    yum install -y php-imap
->  >    yum install -y php-json
->  >    yum install -y php-memcached 
->  >    yum install -y php-tidy
->  >    yum install -y php-pear 
->  >    yum install -y php-pecl-geoip
->  >    yum install -y php-pecl-json
->  >    yum install -y php-pecl-memcache
->  >    yum install -y php-pecl-mongodb
->  >    yum install -y php-pecl-rar
->  >    yum install -y php-pecl-pq 
->  >    yum install -y php-pecl-yaml 
->  >    yum install -y php-intl
->  >    yum install -y php-soap
->  >   
->  >   ; yum install -y php-cli # 위 라이브러리 설치후 필요할 경우 추가
->  >    systemctl restart httpd
->  >   
->  >```
-> ---------------------------------------------------------------------------------------------
-
 ## yum 을 이용하여 Maria DB 설치
 > ---------------------------------------------------------------------------------------------
 >  >
@@ -260,6 +191,75 @@
 >  >   dual_log_enable=YES
 >  >   log_ftp_protocol=YES
 >  >   ftp_username=nobody
+>  >   
+>  >```
+> ---------------------------------------------------------------------------------------------
+
+## yum 을 이용하여 PHP7.2 설치
+> ---------------------------------------------------------------------------------------------
+>  >
+>  >```
+>  >    yum  install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+>  >   
+>  >    wget -P /root http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+>  >   http://rpms.remirepo.net/enterprise/remi-release-7.rpm 파일 다운로드가 정상적으로 진행되지 않을경우
+>  >   http://rpms.remirepo.net 에서 직접 다운받아서 서버에 업로드 한후 진행하면 된다.
+>  >   
+>  >    rpm -Uvh /root/remi-release-7.rpm
+>  >   
+>  >    yum install -y yum-utils
+>  >   #  yum-config-manager --enable remi-php72
+>  >   #  yum-config-manager --enable remi-php74  <- 적용시 PHP7.4 설치
+>  >   #  yum-config-manager --enable remi-php82  <- 적용시 PHP8.2.* 설치
+>  >    
+>  >   
+>  >    yum install -y https://rpms.remirepo.net/enterprise/remi-release-7.rpm
+>  >    yum-config-manager --disable 'remi-php*'
+>  >    yum-config-manager --enable remi-php80
+>  >    yum-config-manager --enable remi-php80  <- 적용시 PHP8.0 설치
+>  >    yum-config-manager --enable remi-php82  <- 적용시 PHP8.0 설치
+>  >
+>  >    yum install -y php
+>  >    yum install -y php-common
+>  >    yum install -y php-fpm
+>  >    yum install -y php-process
+>  >    yum install -y php-opcache
+>  >    yum install -y php-pecl-apcu
+>  >    yum install -y php-mysqlnd
+>  >    yum install -y php-pdo
+>  >    yum install -y php-gd
+>  >    yum install -y php-mbstring
+>  >    yum install -y php-xml
+>  >    yum install -y php-pecl-zip
+>  >    yum install -y php-bcmath
+>  >    yum install -y php-pgsql
+>  >    yum install -y php-odbc
+>  >    yum install -y php-pdo.x86_64
+>  >    yum install -y php-pdo-dblib.x86_64
+>  >    yum install -y php-pecl-imagick.x86_64
+>  >    yum install -y php-pecl-imagick-devel.x86_64
+>  >    yum install -y php-xmlrpc.x86_64
+>  >    yum install -y php-redis
+>  >    yum install -y php-pecl-redis4
+>  >    yum install -y php-brotli
+>  >    yum install -y php-gmp
+>  >    yum install -y php-imap
+>  >    yum install -y php-json
+>  >    yum install -y php-memcached 
+>  >    yum install -y php-tidy
+>  >    yum install -y php-pear 
+>  >    yum install -y php-pecl-geoip
+>  >    yum install -y php-pecl-json
+>  >    yum install -y php-pecl-memcache
+>  >    yum install -y php-pecl-mongodb
+>  >    yum install -y php-pecl-rar
+>  >    yum install -y php-pecl-pq 
+>  >    yum install -y php-pecl-yaml 
+>  >    yum install -y php-intl
+>  >    yum install -y php-soap
+>  >   
+>  >   ; yum install -y php-cli # 위 라이브러리 설치후 필요할 경우 추가
+>  >    systemctl restart httpd
 >  >   
 >  >```
 > ---------------------------------------------------------------------------------------------
