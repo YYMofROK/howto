@@ -49,6 +49,71 @@
 >  >```
 > ---------------------------------------------------------------------------------------------
 
+## [참고]firewall 설정 참고자료
+> ---------------------------------------------------------------------------------------------
+>  >
+>  > php-fpm
+>  >```
+>  >    
+>  >    firewall port open
+>  >    firewall-cmd --zone=public --add-port=20/tcp --permanent
+>  >    firewall-cmd --zone=public --add-port=21/tcp --permanent
+>  >    firewall-cmd --zone=public --add-port=80/tcp --permanent
+>  >    firewall-cmd --zone=public --add-port=443/tcp --permanent
+>  >    firewall-cmd --zone=public --add-port=3306/tcp --permanent
+>  >    firewall-cmd --zone=public --add-port=50001-50100/tcp --permanent
+>  >    firewall-cmd --zone=public --add-port=873/tcp --permanent
+>  >    firewall-cmd --reload
+>  >    
+>  >    
+>  >    firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address=192.168.0.100 reject' #--> 피드백 보내줌
+>  >    firewall-cmd --permanent --remove-rich-rule='rule family="ipv4" source address=192.168.0.100 reject '#--> 피드백 보내줌
+>  >    
+>  >    
+>  >    firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address=192.168.0.100 drop'   #--> 피드백 없음
+>  >    firewall-cmd --permanent --remove-rich-rule='rule family="ipv4" source address=192.168.0.100 drop'   #--> 피드백 없음
+>  >    
+>  >    firewall-cmd --reload
+>  >```
+
+> ---------------------------------------------------------------------------------------------
+
+## [참고]IPTABLES 해제
+> ---------------------------------------------------------------------------------------------
+>  >
+>  >```
+>  >   # 개발 및 테스트 목적으로 실 서비스 운영시 차단은 권장하지 않습니다.
+>  >   
+>  >    iptables -F
+>  >   
+>  >```
+> ---------------------------------------------------------------------------------------------
+
+## [참고]selinux 해제
+> ---------------------------------------------------------------------------------------------
+>  >
+>  >```
+>  >   # 개발 및 테스트 목적으로 실 서비스 운영시 비활성화는 권장하지 않습니다.
+>  >   
+>  >    vi /etc/selinux/config
+>  >   
+>  >   # This file controls the state of SELinux on the system.
+>  >   # SELINUX= can take one of these three values:
+>  >   #     enforcing - SELinux security policy is enforced.
+>  >   #     permissive - SELinux prints warnings instead of enforcing.
+>  >   #     disabled - No SELinux policy is loaded.
+>  >   #SELINUX=enforcing
+>  >   SELINUM=disabled
+>  >   # SELINUXTYPE= can take one of three values:
+>  >   #     targeted - Targeted processes are protected,
+>  >   #     minimum - Modification of targeted policy. Only selected processes are protected.
+>  >   #     mls - Multi Level Security protection.
+>  >   SELINUXTYPE=targeted
+>  > 
+>  >    reboot
+>  >```
+> ---------------------------------------------------------------------------------------------
+
 ## yum 을 이용하여 PHP7.2 설치
 > ---------------------------------------------------------------------------------------------
 >  >
@@ -220,71 +285,6 @@
 >  >    systemctl restart httpd
 >  >```
 
-> ---------------------------------------------------------------------------------------------
-
-## [참고]firewall 설정 참고자료
-> ---------------------------------------------------------------------------------------------
->  >
->  > php-fpm
->  >```
->  >    
->  >    firewall port open
->  >    firewall-cmd --zone=public --add-port=20/tcp --permanent
->  >    firewall-cmd --zone=public --add-port=21/tcp --permanent
->  >    firewall-cmd --zone=public --add-port=80/tcp --permanent
->  >    firewall-cmd --zone=public --add-port=443/tcp --permanent
->  >    firewall-cmd --zone=public --add-port=3306/tcp --permanent
->  >    firewall-cmd --zone=public --add-port=50001-50100/tcp --permanent
->  >    firewall-cmd --zone=public --add-port=873/tcp --permanent
->  >    firewall-cmd --reload
->  >    
->  >    
->  >    firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address=192.168.0.100 reject' #--> 피드백 보내줌
->  >    firewall-cmd --permanent --remove-rich-rule='rule family="ipv4" source address=192.168.0.100 reject '#--> 피드백 보내줌
->  >    
->  >    
->  >    firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address=192.168.0.100 drop'   #--> 피드백 없음
->  >    firewall-cmd --permanent --remove-rich-rule='rule family="ipv4" source address=192.168.0.100 drop'   #--> 피드백 없음
->  >    
->  >    firewall-cmd --reload
->  >```
-
-> ---------------------------------------------------------------------------------------------
-
-## [참고]IPTABLES 해제
-> ---------------------------------------------------------------------------------------------
->  >
->  >```
->  >   # 개발 및 테스트 목적으로 실 서비스 운영시 차단은 권장하지 않습니다.
->  >   
->  >    iptables -F
->  >   
->  >```
-> ---------------------------------------------------------------------------------------------
-
-## [참고]selinux 해제
-> ---------------------------------------------------------------------------------------------
->  >
->  >```
->  >   # 개발 및 테스트 목적으로 실 서비스 운영시 비활성화는 권장하지 않습니다.
->  >   
->  >    vi /etc/selinux/config
->  >   
->  >   # This file controls the state of SELinux on the system.
->  >   # SELINUX= can take one of these three values:
->  >   #     enforcing - SELinux security policy is enforced.
->  >   #     permissive - SELinux prints warnings instead of enforcing.
->  >   #     disabled - No SELinux policy is loaded.
->  >   #SELINUX=enforcing
->  >   SELINUM=disabled
->  >   # SELINUXTYPE= can take one of three values:
->  >   #     targeted - Targeted processes are protected,
->  >   #     minimum - Modification of targeted policy. Only selected processes are protected.
->  >   #     mls - Multi Level Security protection.
->  >   SELINUXTYPE=targeted
->  > 
->  >    reboot
->  >```
 > ---------------------------------------------------------------------------------------------
 
 ## [참고]Convert Certificate Format SSL 인증서 변환 가이드
