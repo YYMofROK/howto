@@ -119,14 +119,20 @@
 >  >
 >  > MariaDB 설치를 위한 저장소 설정하기
 >  >```
->  >    sudo vi /etc/yum.repos.d/MariaDB.repo
+>  >  sudo vi /etc/yum.repos.d/MariaDB.repo
 >  >   
->  >   #http://downloads.mariadb.org/mariadb/repositories/
->  >   [mariadb]
->  >   name = MariaDB
->  >   baseurl = https://archive.mariadb.org/mariadb-11.4/yum/centos7-amd64/
->  >   gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
->  >   gpgcheck=1
+>  >  #http://downloads.mariadb.org/mariadb/repositories/
+>  >  sudo vi /etc/yum.repos.d/MariaDB.repo
+>  >  [mariadb]
+>  >  name = MariaDB
+>  >  # Rocky Linux 9 및 ARM64(M1/M2 Mac) 아키텍처에 최적화된 경로입니다.
+>  >  baseurl = https://archive.mariadb.org/mariadb-11.4/yum/rhel9-aarch64/
+>  >  gpgkey = https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+>  >  gpgcheck = 1
+>  >
+>  >
+>  >
+>  >
 >  >   #Maria DB 설치
 >  >   #repository 설정을 했으면 아래 명령으로 YUM을 통해서 Maria DB를 설치할 수 있다.
 >  >   
