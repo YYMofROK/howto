@@ -227,6 +227,28 @@
 > ---------------------------------------------------------------------------------------------
 >  >
 >  >```
+>  >
+>  >  # 1. Remi 저장소 활성화를 위한 EPEL 및 Remi RPM 설치
+>  >  sudo dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+>  >  sudo dnf install -y https://rpms.remirepo.net/enterprise/remi-release-8.rpm
+>  >  
+>  >  # 2. 기존의 기본 PHP 모듈 스트림 초기화
+>  >  sudo dnf module reset php -y
+>  >  
+>  >  # 3. 원하는 PHP 버전 스트림 활성화 (8.2 또는 8.3 선택 가능)
+>  >  # PHP 8.2를 원하시면 아래 명령어를 그대로 실행하세요.
+>  >  #sudo dnf module enable php:remi-8.2 -y
+>  >  # (만약 8.3을 원하시면 아래 주석을 풀고 실행)
+>  >  sudo dnf module enable php:remi-8.3 -y
+>  >  
+>  >  # 4. 이제 dnf list를 다시 확인해보면 8.2 버전으로 바뀐 것을 볼 수 있습니다.
+>  >  sudo dnf list php
+>  >
+>  >
+>  >```
+>  >
+>  >
+>  >```
 >  >    yum  install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 >  >   
 >  >    wget -P /root http://rpms.remirepo.net/enterprise/remi-release-7.rpm
