@@ -171,6 +171,30 @@
 >  >        FLUSH PRIVILEGES;
 >  >```
 > ---------------------------------------------------------------------------------------------
+>  >
+>  >```
+>  >   # 1. 기존에 임의로 생성했던 레포지토리 파일 및 캐시 제거
+>  >   sudo rm -f /etc/yum.repos.d/MariaDB.repo
+>  >   sudo dnf clean all
+>  >   
+>  >   # 2. MariaDB 공식 레포지토리 설정 스크립트 실행 (12.3 버전 지정)
+>  >   # 실행 환경(ARM64 등)을 자동 감지하여 12.3 안정화 버전을 셋업합니다.
+>  >   curl -LsS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash -s -- --mariadb-server-version=12.3
+>  >   
+>  >   # 3. 메타데이터 캐시 생성 및 12.3 패키지 설치
+>  >   sudo dnf makecache
+>  >   sudo dnf install -y MariaDB-server MariaDB-client
+>  >   
+>  >   # 4. MariaDB 서비스 활성화 및 즉시 시작
+>  >   sudo systemctl enable --now mariadb
+>  >   
+>  >   # 5. 서비스가 정상 작동 중인지 상태 확인
+>  >   sudo systemctl status mariadb
+>  >   
+>  >   # 6. 최초 보안 설정 가동 (서비스가 켜진 상태이므로 정상 작동함)
+>  >   sudo mariadb-secure-installation
+>  >```
+> ---------------------------------------------------------------------------------------------
 
 ## yum 을 이용하여 VSFTPD 설치
 > ---------------------------------------------------------------------------------------------
