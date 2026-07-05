@@ -219,6 +219,12 @@
 >  >   dual_log_enable=YES
 >  >   log_ftp_protocol=YES
 >  >   ftp_username=nobody
+>  >
+>  >   # 수정 전
+>  >   tcp_wrappers=YES
+>  >   
+>  >   # 수정 후
+>  >   tcp_wrappers=NO
 >  >   
 >  >```
 > ---------------------------------------------------------------------------------------------
