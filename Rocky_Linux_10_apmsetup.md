@@ -251,30 +251,6 @@
 >  >  sudo dnf list php
 >  >
 >  >
->  >```
->  >
->  >
->  >```
->  >    yum  install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
->  >   
->  >    wget -P /root http://rpms.remirepo.net/enterprise/remi-release-7.rpm
->  >   http://rpms.remirepo.net/enterprise/remi-release-7.rpm 파일 다운로드가 정상적으로 진행되지 않을경우
->  >   http://rpms.remirepo.net 에서 직접 다운받아서 서버에 업로드 한후 진행하면 된다.
->  >   
->  >    rpm -Uvh /root/remi-release-7.rpm
->  >   
->  >    yum install -y yum-utils
->  >   #  yum-config-manager --enable remi-php72
->  >   #  yum-config-manager --enable remi-php74  <- 적용시 PHP7.4 설치
->  >   #  yum-config-manager --enable remi-php82  <- 적용시 PHP8.2.* 설치
->  >    
->  >   
->  >    yum install -y https://rpms.remirepo.net/enterprise/remi-release-7.rpm
->  >    yum-config-manager --disable 'remi-php*'
->  >    yum-config-manager --enable remi-php80
->  >    yum-config-manager --enable remi-php80  <- 적용시 PHP8.0 설치
->  >    yum-config-manager --enable remi-php82  <- 적용시 PHP8.0 설치
->  >
 >  >    yum install -y php
 >  >    yum install -y php-common
 >  >    yum install -y php-fpm
