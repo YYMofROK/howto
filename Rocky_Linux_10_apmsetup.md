@@ -231,7 +231,18 @@
 
 ## yum 을 이용하여 PHP8.x 설치
 > ---------------------------------------------------------------------------------------------
->  >
+>
+>  >```
+>  > # OS 메이저 버전 확인 및 Remi 저장소 설치
+>  > ROCKY_VER=$(cut -d: -f5 /etc/system-release-cpe | cut -d. -f1)
+>  > sudo dnf install -y epel-release
+>  > sudo dnf install -y https://rpms.remirepo.net/enterprise/remi-release-${ROCKY_VER}.rpm
+>  > 
+>  > # PHP 8.3 모듈 활성화
+>  > sudo dnf module reset php -y
+>  > sudo dnf module enable php:remi-8.3 -y
+>  >```
+>
 >  >```
 >  >
 >  >  # 1. Remi 저장소 활성화를 위한 EPEL 및 Remi RPM 설치
